@@ -246,6 +246,7 @@ main {
 //FOOTER-----------------------------------
 footer{
     .contact{
+        margin-bottom: 50px;
         .contact-title{
             margin-left: 25px;
         }
@@ -253,7 +254,87 @@ footer{
             font-size: 40px;
         }
         .contact-line{
-            
+            margin-top: 40px;
+            p{
+                color:#A5A5A5;
+                font-weight: 600;
+                margin: 17px ;
+                margin-left: 60px;
+            }
+            .contact-line-label{
+                color: #08A6E4;
+                font-size: 11px;
+                font-weight: 600;
+                margin-top: 40px;
+                margin-left: 30px;
+            }
+            .contact-line-input{
+                border: none;
+                border-bottom: #95989A solid 2px;
+                width: 280px;
+                margin-left: 30px;
+                margin-bottom: 40px;
+            }
+        }
+        .contact-terms{
+            margin: auto;
+            width: 80%;
+            input{
+                float: left;
+                display: inline-block;
+                margin-right: 10px;
+                border-radius: 0%;
+            }
+            label{
+                color: #a5a5a5;
+                display: inline-block;
+                width: 85%;
+            }
+        }
+        button{
+            width: 226px;
+            float: right;
+            padding: 20px 0;
+            border-radius: 50px;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            background-color: #08A6E4;
+            border: none;
+            margin: 40px 0;
+            margin-right: 30px;
+            clear: right;
+        }
+    }
+    .foot{
+        padding: 40px;
+        .foot-title{
+            float: left;
+            margin-left: 17px;
+            padding-bottom: 40px;
+            h1{
+                color: #08A6E4;
+                font-size: 30px;
+                font-weight: 300;
+            }
+            p{
+                font-size: 11px;
+                color: #95989A;
+            }
+        }
+        .foot-social{
+            float: right;
+            margin-right: 30px;
+            padding-top: 10px;
+            .foot-social-twitter{
+                color: #55ACEE;
+                font-size: 24px;
+            }
+            .foot-social-facebook{
+                color: #3B5998;
+                font-size: 24px;
+                margin-left: 20px;
+            }
         }
     }
 }
