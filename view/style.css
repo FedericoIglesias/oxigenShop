@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  box-shadow: 5px black;
+}
+header h1 {
+  color: #08a6e4;
+  font-weight: 300;
+}
+
+main {
+  align-items: center;
+  justify-content: center;
+}
+main .show {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+main .show .sell-more {
+  font-size: 35px;
+}
+main .show .button-open {
+  width: 310px;
+  height: 67px;
+  color: white;
+  background-color: #08a6e4;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+}
+main .show .img-main img {
+  box-sizing: border-box;
+  width: 100%;
+}
+main .show .subtitle-popular {
+  text-align: center;
+  margin: 36px;
+  font-size: 30px;
+  font-weight: 300;
+}
+main .show article {
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+main .show article .article-number {
+  font-size: 20px;
+  font-weight: 800;
+}
+main .show article .article-text {
+  color: #a5a5a5;
+}
+main .show article .circle-red {
+  border-radius: 100%;
+  width: 58px;
+  height: 58px;
+  background-color: #fb3b64;
+  display: inline-block;
+}
+main .show article .circle-blue {
+  border-radius: 100%;
+  width: 58px;
+  height: 58px;
+  background-color: #08a6e4;
+  display: inline-block;
+}
+main .show article .circle-green {
+  border-radius: 100%;
+  width: 58px;
+  height: 58px;
+  background-color: #55dfb4;
+  display: inline-block;
+}
+main .cards {
+  background-color: #a5a5a5;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+main .cards article {
+  background-color: white;
+  width: 315px;
+  display: block;
+  padding-bottom: 4px;
+  align-items: center;
+  margin: 40px auto;
+  padding-top: 5px;
+}
+main .cards article .cards-title {
+  margin: 20px;
+  font-size: 30px;
+}
+main .cards article .cards-text {
+  margin: 20px;
+}
+main .cards article .cards-container-div-img {
+  position: relative;
+  justify-content: center;
+  height: 130px;
+}
+main .cards article .cards-container-div-img .cards-red-circle {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  background-color: #fb3b64;
+  border-radius: 100%;
+  margin-left: 170px;
+}
+main .cards article .cards-container-div-img img {
+  height: 100px;
+  width: 190px;
+  position: absolute;
+  left: 20%;
+  top: 20px;
+  z-index: 2;
+}
+main .cards article .cards-blue-circle {
+  width: 130px;
+  height: 130px;
+  background-color: #08a6e4;
+  border-radius: 100%;
+  margin-left: 80px;
+}
+main .cards article .cards-blue-circle img {
+  width: 170px;
+  height: 130px;
+}
+main .cards article .cards-background-green {
+  background-color: #55dfb4;
+  height: 195px;
+}
+main .cards article .cards-background-green img {
+  margin-top: 25px;
+}
+main .sale {
+  align-items: center;
+}
+main .sale h2 {
+  text-align: center;
+  font-size: 36px;
+  margin: 55px 0 15px;
+}
+main .sale article {
+  margin-bottom: 55px;
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+main .sale .sale-red {
+  border: #fb3b64 solid 1px;
+  border-radius: 10px;
+}
+main .sale .sale-green {
+  border: #55dfb4 solid 1px;
+  border-radius: 10px;
+}
+main .sale .sale-blue {
+  border: #08a6e4 solid 1px;
+  border-radius: 10px;
+}
+main .sale .sale-text p:nth-child(1) {
+  font-weight: 700;
+  font-size: 20px;
+}
+main .sale .sale-text p:nth-child(2) {
+  font-weight: 300;
+  font-size: 46px;
+}
+main .sale .sale-text p:nth-child(3) {
+  font-size: 12px;
+  font-weight: 700;
+}
+main .sale .sale-text .sale-text-blue {
+  color: #08a6e4;
+}
+main .sale .sale-text .sale-text-red {
+  color: #fb3b64;
+}
+main .sale .sale-text .sale-text-green {
+  color: #55dfb4;
+}
+main .sale .sale-button {
+  bottom: -26px;
+  left: 75px;
+  position: absolute;
+  font-size: 13px;
+  color: white;
+  font-weight: 700;
+  width: 150px;
+  text-align: center;
+  padding: 16px 56px;
+  border-radius: 50px;
+}
+main .sale .button-red {
+  background-color: #fb3b64;
+}
+main .sale .button-blue {
+  background-color: #08a6e4;
+}
+main .sale .button-green {
+  background-color: #55dfb4;
+}/*# sourceMappingURL=style.css.map */
