@@ -87,13 +87,12 @@ main .show article .circle-green {
 }
 main .cards {
   background-color: #a5a5a5;
-  justify-content: center;
-  align-items: center;
   padding: 20px 0;
 }
 main .cards article {
   background-color: white;
-  width: 315px;
+  max-width: 315px;
+  width: 90%;
   display: block;
   padding-bottom: 4px;
   align-items: center;
@@ -145,9 +144,10 @@ main .cards article .cards-background-green {
 }
 main .cards article .cards-background-green img {
   margin-top: 25px;
+  width: 90%;
 }
 main .sale {
-  align-items: center;
+  margin: auto;
 }
 main .sale h2 {
   text-align: center;
@@ -155,9 +155,9 @@ main .sale h2 {
   margin: 55px 0 15px;
 }
 main .sale article {
-  margin-bottom: 55px;
-  text-align: center;
-  width: 300px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 320px;
   height: 300px;
   position: relative;
 }
@@ -172,6 +172,11 @@ main .sale .sale-green {
 main .sale .sale-blue {
   border: #08a6e4 solid 1px;
   border-radius: 10px;
+}
+main .sale .sale-text {
+  text-align: center;
+  float: left;
+  margin-top: auto;
 }
 main .sale .sale-text p:nth-child(1) {
   font-weight: 700;
@@ -194,6 +199,23 @@ main .sale .sale-text .sale-text-red {
 main .sale .sale-text .sale-text-green {
   color: #55dfb4;
 }
+main .sale .sale-list {
+  font-size: 14px;
+  margin: 25px auto;
+  float: right;
+}
+main .sale .sale-list ul {
+  margin-top: 25px;
+  margin-right: 10px;
+}
+main .sale .sale-list ul .checked {
+  margin-top: 20px;
+  list-style-image: url(../img/Checkbox.svg);
+}
+main .sale .sale-list ul .cross {
+  margin-top: 20px;
+  list-style-image: url(../img/Cross.svg);
+}
 main .sale .sale-button {
   bottom: -26px;
   left: 75px;
@@ -214,4 +236,11 @@ main .sale .button-blue {
 }
 main .sale .button-green {
   background-color: #55dfb4;
+}
+
+footer .contact .contact-title {
+  margin-left: 25px;
+}
+footer .contact h6 {
+  font-size: 40px;
 }/*# sourceMappingURL=style.css.map */

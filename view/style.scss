@@ -85,14 +85,14 @@ main {
             }
         }
     }
+    //SECTION CARD----------------------------
     .cards {
         background-color: #a5a5a5;
-        justify-content: center;
-        align-items: center;
         padding: 20px 0;
         article {
             background-color: white;
-            width: 315px;
+            max-width: 315px;
+            width: 90%;
             display: block;
             padding-bottom: 4px;
             align-items: center;
@@ -144,21 +144,23 @@ main {
                 height: 195px;
                 img {
                     margin-top: 25px;
+                    width: 90%;
                 }
             }
         }
     }
+    //SECTION SALE---------------------------------
     .sale {
-        align-items: center;
+        margin: auto;
         h2 {
             text-align: center;
             font-size: 36px;
             margin: 55px 0 15px;
         }
         article {
-            margin-bottom: 55px;
-            text-align: center;
-            width: 300px;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 320px;
             height: 300px;
             position: relative;
         }
@@ -175,6 +177,10 @@ main {
             border-radius: 10px;
         }
         .sale-text {
+            text-align: center;
+            float: left;
+
+            margin-top: auto;
             p:nth-child(1) {
                 font-weight: 700;
                 font-size: 20px;
@@ -185,8 +191,8 @@ main {
             }
             p:nth-child(3) {
                 font-size: 12px;
-                font-weight: 700;   
-            }               
+                font-weight: 700;
+            }
             .sale-text-blue {
                 color: #08a6e4;
             }
@@ -196,7 +202,23 @@ main {
             .sale-text-green {
                 color: #55dfb4;
             }
-
+        }
+        .sale-list {
+            font-size: 14px;
+            margin: 25px auto;
+            float: right;
+            ul {
+                margin-top: 25px;
+                margin-right: 10px;
+                .checked {
+                    margin-top: 20px;
+                    list-style-image: url(../img/Checkbox.svg);
+                }
+                .cross {
+                    margin-top: 20px;
+                    list-style-image: url(../img/Cross.svg);
+                }
+            }
         }
         .sale-button {
             bottom: -26px;
@@ -218,6 +240,20 @@ main {
         }
         .button-green {
             background-color: #55dfb4;
+        }
+    }
+}
+//FOOTER-----------------------------------
+footer{
+    .contact{
+        .contact-title{
+            margin-left: 25px;
+        }
+        h6{
+            font-size: 40px;
+        }
+        .contact-line{
+            
         }
     }
 }
