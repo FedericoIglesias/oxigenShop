@@ -11,36 +11,49 @@ body {
 }
 
 header {
-  box-shadow: 5px black;
+  max-width: 375px;
+  margin: 0 auto;
+  height: 100px;
+}
+header .shadow {
+  box-shadow: inset 5px 5px 5px 0 black;
 }
 header h1 {
   color: #08a6e4;
   font-weight: 300;
+  margin: 17px 0 17px 25px;
+  float: left;
+}
+header .icon {
+  color: #55acee;
+  float: right;
+  margin: 29px 20px 39px 0;
 }
 
 main {
+  box-shadow: inset 0 1px 10px;
   align-items: center;
+  clear: both;
   justify-content: center;
 }
 main .show {
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  padding: 30px 0;
   text-align: center;
 }
 main .show .sell-more {
   font-size: 35px;
+  margin-bottom: 20px;
 }
 main .show .button-open {
   width: 310px;
   height: 67px;
   color: white;
   background-color: #08a6e4;
-  align-items: center;
-  justify-content: center;
   border: none;
   border-radius: 50px;
   font-weight: 700;
+  margin-top: 30px;
+  box-shadow: 2px 2px 10px #08a6e4;
 }
 main .show .img-main img {
   box-sizing: border-box;
@@ -60,9 +73,11 @@ main .show article {
 main .show article .article-number {
   font-size: 20px;
   font-weight: 800;
+  margin: 19px 0 13px;
 }
 main .show article .article-text {
   color: #a5a5a5;
+  margin-bottom: 25px;
 }
 main .show article .circle-red {
   border-radius: 100%;
@@ -71,6 +86,10 @@ main .show article .circle-red {
   background-color: #fb3b64;
   display: inline-block;
 }
+main .show article .circle-red img {
+  position: relative;
+  left: 20px;
+}
 main .show article .circle-blue {
   border-radius: 100%;
   width: 58px;
@@ -78,12 +97,22 @@ main .show article .circle-blue {
   background-color: #08a6e4;
   display: inline-block;
 }
+main .show article .circle-blue img {
+  position: relative;
+  left: 13px;
+  top: 10px;
+}
 main .show article .circle-green {
   border-radius: 100%;
   width: 58px;
   height: 58px;
   background-color: #55dfb4;
   display: inline-block;
+}
+main .show article .circle-green img {
+  position: relative;
+  left: 20px;
+  top: 5px;
 }
 main .cards {
   background-color: #a5a5a5;
@@ -94,9 +123,7 @@ main .cards article {
   max-width: 315px;
   width: 90%;
   display: block;
-  padding-bottom: 4px;
-  align-items: center;
-  margin: 40px auto;
+  margin: 40px auto 0;
   padding-top: 5px;
 }
 main .cards article .cards-title {
@@ -105,6 +132,7 @@ main .cards article .cards-title {
 }
 main .cards article .cards-text {
   margin: 20px;
+  padding-bottom: 10px;
 }
 main .cards article .cards-container-div-img {
   position: relative;
@@ -148,6 +176,7 @@ main .cards article .cards-background-green img {
 }
 main .sale {
   margin: auto;
+  padding-bottom: 30px;
 }
 main .sale h2 {
   text-align: center;
@@ -173,10 +202,19 @@ main .sale .sale-blue {
   border: #08a6e4 solid 1px;
   border-radius: 10px;
 }
+main .sale .sale-margin-red {
+  margin-left: 60px;
+}
+main .sale .sale-margin-blue {
+  margin-left: 40px;
+}
+main .sale .sale-margin-green {
+  margin-left: 50px;
+}
 main .sale .sale-text {
   text-align: center;
   float: left;
-  margin-top: auto;
+  padding-top: 90px;
 }
 main .sale .sale-text p:nth-child(1) {
   font-weight: 700;
@@ -237,96 +275,106 @@ main .sale .button-blue {
 main .sale .button-green {
   background-color: #55dfb4;
 }
-
-footer .contact {
+main .contact {
+  margin: 0 auto;
   margin-bottom: 50px;
+  max-width: 375px;
 }
-footer .contact .contact-title {
+main .contact .contact-title {
   margin-left: 25px;
 }
-footer .contact h6 {
+main .contact h6 {
   font-size: 40px;
 }
-footer .contact .contact-line {
-  margin-top: 40px;
+main .contact .contact-line {
+  margin: 40px 0;
+  padding-bottom: 40px;
 }
-footer .contact .contact-line p {
-  color: #A5A5A5;
+main .contact .contact-line .contact-email {
+  margin-left: 40px;
+}
+main .contact .contact-line .contact-number {
+  margin-left: 40px;
+  margin-top: 15px;
+}
+main .contact .contact-line p {
+  color: #a5a5a5;
   font-weight: 600;
-  margin: 17px;
-  margin-left: 60px;
+  display: inline-block;
+  position: relative;
+  bottom: 7px;
 }
-footer .contact .contact-line .contact-line-label {
-  color: #08A6E4;
+main .contact .contact-line .contact-padding {
+  padding-top: 30px;
+}
+main .contact .contact-line .contact-line-label {
+  color: #08a6e4;
   font-size: 11px;
   font-weight: 600;
   margin-top: 40px;
   margin-left: 30px;
 }
-footer .contact .contact-line .contact-line-input {
+main .contact .contact-line .contact-line-input {
   border: none;
-  border-bottom: #95989A solid 2px;
+  border-bottom: #95989a solid 2px;
   width: 280px;
   margin-left: 30px;
   margin-bottom: 40px;
 }
-footer .contact .contact-terms {
+main .contact .contact-terms {
   margin: auto;
   width: 80%;
 }
-footer .contact .contact-terms input {
+main .contact .contact-terms input {
   float: left;
-  display: inline-block;
   margin-right: 10px;
   border-radius: 0%;
 }
-footer .contact .contact-terms label {
+main .contact .contact-terms label {
   color: #a5a5a5;
   display: inline-block;
   width: 85%;
 }
-footer .contact button {
+main .contact button {
   width: 226px;
-  float: right;
   padding: 20px 0;
   border-radius: 50px;
   color: white;
   font-size: 13px;
   font-weight: 700;
-  background-color: #08A6E4;
+  background-color: #08a6e4;
   border: none;
-  margin: 40px 0;
-  margin-right: 30px;
-  clear: right;
+  margin: 40px 0 40px 80px;
 }
-footer .foot {
-  padding: 40px;
+
+footer {
+  margin: 0 auto;
 }
-footer .foot .foot-title {
+footer .foot-title {
   float: left;
-  margin-left: 17px;
   padding-bottom: 40px;
+  margin-left: 20px;
 }
-footer .foot .foot-title h1 {
-  color: #08A6E4;
+footer .foot-title h1 {
+  color: #08a6e4;
   font-size: 30px;
   font-weight: 300;
 }
-footer .foot .foot-title p {
+footer .foot-title p {
   font-size: 11px;
-  color: #95989A;
+  color: #95989a;
 }
-footer .foot .foot-social {
+footer .foot-social {
   float: right;
-  margin-right: 30px;
+  margin-right: 20px;
   padding-top: 10px;
 }
-footer .foot .foot-social .foot-social-twitter {
-  color: #55ACEE;
+footer .foot-social .foot-social-twitter {
+  color: #55acee;
   font-size: 24px;
 }
-footer .foot .foot-social .foot-social-facebook {
-  color: #3B5998;
+footer .foot-social .foot-social-facebook {
+  color: #3b5998;
   font-size: 24px;
   margin-left: 20px;
 }/*# sourceMappingURL=style.css.map */
