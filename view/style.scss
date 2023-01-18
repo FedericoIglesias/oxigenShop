@@ -22,6 +22,8 @@ header {
     .menu {
         font-family: "Open Sans", sans-serif;
         display: none;
+        height: 100%;
+
     }
     .icon {
         color: #55acee;
@@ -413,12 +415,21 @@ footer {
         .menu {
             display: flex;
             justify-content: center;
-            align-items: center;
-            p {
-                margin-left: 95px;
-                font-size: 11px;
-                font-weight: 700;
-                color: #a5a5a5;
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                margin: 0 45px;
+                :hover{
+                    color: black;
+                    border-bottom: #08a6e4 solid 4px;
+                }
+                p {
+                    font-size: 11px;
+                    font-weight: 700;
+                    color: #a5a5a5;
+                }
             }
         }
         .icon {
@@ -432,6 +443,7 @@ footer {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
+                
             }
         }
         .cards {

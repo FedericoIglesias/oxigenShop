@@ -24,6 +24,7 @@ header h1 {
 header .menu {
   font-family: "Open Sans", sans-serif;
   display: none;
+  height: 100%;
 }
 header .icon {
   color: #55acee;
@@ -410,10 +411,19 @@ footer .foot-social .foot-social-facebook {
   header .menu {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
-  header .menu p {
-    margin-left: 95px;
+  header .menu div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0 45px;
+  }
+  header .menu div :hover {
+    color: black;
+    border-bottom: #08a6e4 solid 4px;
+  }
+  header .menu div p {
     font-size: 11px;
     font-weight: 700;
     color: #a5a5a5;
