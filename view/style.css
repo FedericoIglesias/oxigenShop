@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@300;400;500;600;700;800&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,16 +13,16 @@ body {
 header {
   max-width: 375px;
   margin: 0 auto;
-  height: 100px;
-}
-header .shadow {
-  box-shadow: inset 5px 5px 5px 0 black;
+  height: 70px;
 }
 header h1 {
   color: #08a6e4;
   font-weight: 300;
   margin: 17px 0 17px 25px;
   float: left;
+}
+header .menu {
+  display: none;
 }
 header .icon {
   color: #55acee;
@@ -134,9 +134,17 @@ main .cards article .cards-text {
   margin: 20px;
   padding-bottom: 10px;
 }
+main .cards article .cards-red-line {
+  display: none;
+}
+main .cards article .cards-blue-line {
+  display: none;
+}
+main .cards article .cards-green-line {
+  display: none;
+}
 main .cards article .cards-container-div-img {
   position: relative;
-  justify-content: center;
   height: 130px;
 }
 main .cards article .cards-container-div-img .cards-red-circle {
@@ -377,4 +385,128 @@ footer .foot-social .foot-social-facebook {
   color: #3b5998;
   font-size: 24px;
   margin-left: 20px;
+}
+
+@media (min-width: 1000px) {
+  header {
+    max-width: 90%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    float: none;
+    margin: 0;
+  }
+  header .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .menu p {
+    margin-left: 95px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #a5a5a5;
+  }
+  header .icon {
+    display: none;
+  }
+  main .show .articles-popular {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  main .cards article:nth-child(1) {
+    max-width: 1124px;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+  main .cards article:nth-child(1) .cards-hypertext {
+    max-width: 416px;
+    margin: 91px 0 91px 35px;
+  }
+  main .cards article:nth-child(1) .cards-hypertext .cards-title {
+    margin: 0;
+  }
+  main .cards article:nth-child(1) .cards-hypertext .cards-text {
+    margin: 0;
+    padding: 0;
+  }
+  main .cards article:nth-child(1) .cards-hypertext .cards-red-line {
+    width: 327px;
+    border-color: #fb3b64;
+    background-color: #fb3b64;
+    margin-top: 50px;
+    height: 2px;
+    display: block;
+  }
+  main .cards article:nth-child(1) .cards-container-div-img {
+    display: flex;
+    align-items: center;
+    margin-right: 110px;
+  }
+  main .cards article:nth-child(1) .cards-container-div-img img {
+    width: 380px;
+    height: 220px;
+    margin: 0;
+    padding: 0;
+    position: static;
+  }
+  main .cards article:nth-child(1) .cards-container-div-img .cards-red-circle {
+    margin: 0;
+    position: absolute;
+    border-radius: 15px;
+    width: 180px;
+    height: 180px;
+    transform: rotate(45deg);
+    right: 0px;
+    top: -70px;
+  }
+  main .cards article:nth-child(2) {
+    max-width: 1124px;
+    display: flex;
+    height: 370px;
+    padding: 0;
+    justify-content: space-between;
+  }
+  main .cards article:nth-child(2) .cards-blue-circle {
+    height: 320px;
+    width: 320px;
+    background-color: #08a6e4;
+    border-radius: 100%;
+    margin: 12px 0 30px 70px;
+  }
+  main .cards article:nth-child(2) .cards-blue-circle img {
+    width: 426px;
+    height: 328px;
+    position: static;
+  }
+  main .cards article:nth-child(2) .cards-hypertext {
+    width: 416px;
+    margin: 69px 20px 71px 0;
+    text-align: left;
+  }
+  main .cards article:nth-child(2) .cards-hypertext .cards-title {
+    margin: 20px;
+    font-size: 30px;
+  }
+  main .cards article:nth-child(2) .cards-hypertext .cards-text {
+    margin: 20px;
+    padding-bottom: 10px;
+  }
+  main .cards article:nth-child(2) .cards-hypertext .cards-blue-line {
+    width: 327px;
+    border-color: #08a6e4;
+    background-color: #08a6e4;
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 2px;
+    display: inline-block;
+  }
 }/*# sourceMappingURL=style.css.map */
