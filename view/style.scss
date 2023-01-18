@@ -20,6 +20,7 @@ header {
         float: left;
     }
     .menu {
+        font-family: "Open Sans", sans-serif;
         display: none;
     }
     .icon {
@@ -40,6 +41,9 @@ main {
             font-size: 35px;
             margin-bottom: 20px;
         }
+        p {
+            font-family: "Open Sans", sans-serif;
+        }
         .button-open {
             width: 310px;
             height: 67px;
@@ -50,6 +54,7 @@ main {
             font-weight: 700;
             margin-top: 30px;
             box-shadow: 2px 2px 10px #08a6e4;
+            font-family: "Open Sans", sans-serif;
         }
         .img-main {
             img {
@@ -131,6 +136,7 @@ main {
             .cards-text {
                 margin: 20px;
                 padding-bottom: 10px;
+                font-family: "Open Sans", sans-serif;
             }
             .cards-red-line {
                 display: none;
@@ -230,6 +236,7 @@ main {
             p:nth-child(2) {
                 font-weight: 300;
                 font-size: 46px;
+                font-family: "Open Sans", sans-serif;
             }
             p:nth-child(3) {
                 font-size: 12px;
@@ -249,6 +256,7 @@ main {
             font-size: 14px;
             margin: 25px auto;
             float: right;
+            font-family: "Open Sans", sans-serif;
             ul {
                 margin-top: 25px;
                 margin-right: 10px;
@@ -284,15 +292,17 @@ main {
             background-color: #55dfb4;
         }
     }
+    //SECTION Contact----------------------------------
     .contact {
-        margin: 0 auto;
-        margin-bottom: 50px;
+        margin: 0 auto 50px;
         max-width: 375px;
+        font-family: 'Open Sans',sans-serif;
         .contact-title {
             margin-left: 25px;
         }
         h6 {
             font-size: 40px;
+            font-family: "Raleway", sans-serif;
         }
         .contact-line {
             margin: 40px 0;
@@ -311,23 +321,23 @@ main {
                 position: relative;
                 bottom: 7px;
             }
-            .contact-padding {
-                padding-top: 30px;
-            }
-            .contact-line-label {
-                color: #08a6e4;
-                font-size: 11px;
-                font-weight: 600;
-                margin-top: 40px;
-                margin-left: 30px;
-            }
-            .contact-line-input {
-                border: none;
-                border-bottom: #95989a solid 2px;
-                width: 280px;
-                margin-left: 30px;
-                margin-bottom: 40px;
-            }
+        }
+        .contact-padding {
+            padding-top: 30px;
+        }
+        .contact-line-label {
+            color: #08a6e4;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        .contact-line-input {
+            border: none;
+            border-bottom: #95989a solid 2px;
+            width: 280px;
+            margin-left: 30px;
+            margin-bottom: 40px;
         }
         .contact-terms {
             margin: auto;
@@ -335,7 +345,6 @@ main {
             input {
                 float: left;
                 margin-right: 10px;
-                border-radius: 0%;
             }
             label {
                 color: #a5a5a5;
@@ -479,7 +488,7 @@ footer {
                 max-width: 1124px;
                 display: flex;
                 height: 370px;
-                padding:0;
+                padding: 0;
                 justify-content: space-between;
                 .cards-blue-circle {
                     height: 320px;
@@ -493,28 +502,181 @@ footer {
                         position: static;
                     }
                 }
-                    .cards-hypertext{           
-                        width: 416px;    
-                        margin: 69px 20px 71px 0;
-                        text-align: left;         
-                        .cards-title {
-                            margin: 20px;
-                            font-size: 30px;
-                        }
-                        .cards-text {
-                            margin: 20px;
-                            padding-bottom: 10px;
-                        }
-                        .cards-blue-line {
-                            width: 327px;
-                            border-color: #08a6e4;
-                            background-color:#08a6e4;
-                            margin-top: 50px;
-                            margin-left: 20px;
-                            height: 2px;
-                            display: inline-block;
+                .cards-hypertext {
+                    width: 416px;
+                    margin: 69px 20px 71px 0;
+                    text-align: left;
+                    .cards-title {
+                        margin: 20px;
+                        font-size: 30px;
+                    }
+                    .cards-text {
+                        margin: 20px;
+                        padding-bottom: 10px;
+                    }
+                    .cards-blue-line {
+                        width: 327px;
+                        border-color: #08a6e4;
+                        background-color: #08a6e4;
+                        margin-top: 50px;
+                        margin-left: 20px;
+                        height: 2px;
+                        display: inline-block;
+                    }
+                }
+            }
+            article:nth-child(3) {
+                background-color: #a5a5a5;
+                max-width: 1124px;
+                display: flex;
+                height: 370px;
+                padding: 0;
+                justify-content: space-between;
+                .cards-hypertext {
+                    width: 60%;
+                    max-width: 660px;
+                    text-align: left;
+                    background-color: white;
+                    margin-right: 60px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .cards-title {
+                        margin: 20px;
+                        font-size: 30px;
+                    }
+                    .cards-text {
+                        margin: 20px;
+                        padding-bottom: 10px;
+                    }
+                    .cards-green-line {
+                        width: 327px;
+                        border-color: #55dfb4;
+                        background-color: #55dfb4;
+                        margin-top: 50px;
+                        margin-left: 20px;
+                        height: 2px;
+                        display: inline-block;
+                    }
+                }
+                .cards-background-green {
+                    background-color: #55dfb4;
+                    height: 370px;
+                    img {
+                        margin-top: 25px;
+                        width: 440px;
+                    }
+                }
+            }
+        }
+        .sale {
+            margin: auto;
+            padding-bottom: 30px;
+            .sale-div {
+                display: flex;
+                justify-content: space-around;
+                article {
+                    height: 500px;
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    align-items: center;
+                    .sale-margin-red {
+                        margin-left: 0px;
+                    }
+                    .sale-margin-blue {
+                        margin-left: 0px;
+                    }
+                    .sale-margin-green {
+                        margin-left: 0px;
+                    }
+                    .sale-text {
+                        padding: 0;
+                    }
+                    .sale-list {
+                        text-align: center;
+                        ul {
+                            margin-right: 0px;
+                            li {
+                                text-align: center;
+                            }
                         }
                     }
+                }
+            }
+        }
+    }
+    .contact {
+        display: flex;
+        justify-content: center;
+        max-width: none;
+        .contact-informatio-first {
+            min-width: 360px;
+            margin-right: 113px;
+            .contact-title {
+                margin-left: 0;
+                p {
+                    margin-bottom: 42px;
+                }
+            }
+            h6 {
+                margin: 22px 0;
+                font-size: 49px;
+            }
+            .contact-line {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                .contact-email {
+                    display: flex;
+                    margin: 0;
+                    img {
+                        width: 22px;
+                    }
+                    p {
+                        margin-left: 3px;
+                        position: static;
+                    }
+                }
+                .contact-number {
+                    display: flex;
+                    margin: 0;
+                    img {
+                        width: 22px;
+                        margin-left: 23px;
+                    }
+                    p {
+                        margin-left: 3px;
+                        position: static;
+                    }
+                }
+            }
+        }
+        .contact-informatio-second {
+            min-width: 440px;
+            .contact-line-label {
+                margin-left: 0px;
+            }
+            .contact-line-input {
+                width: 440px;
+                margin-left: 0px;
+            }
+            .contact-terms {
+                margin: 0;
+                width: 100%;
+                input {
+                    float: left;
+                    margin-right: 10px;
+                }
+                label {
+                    color: #a5a5a5;
+                    display: inline-block;
+                    width: 90%;
+                }
+            }
+            .contact-button {
+                display: flex;
+                justify-content: end;
             }
         }
     }

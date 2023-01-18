@@ -22,6 +22,7 @@ header h1 {
   float: left;
 }
 header .menu {
+  font-family: "Open Sans", sans-serif;
   display: none;
 }
 header .icon {
@@ -44,6 +45,9 @@ main .show .sell-more {
   font-size: 35px;
   margin-bottom: 20px;
 }
+main .show p {
+  font-family: "Open Sans", sans-serif;
+}
 main .show .button-open {
   width: 310px;
   height: 67px;
@@ -54,6 +58,7 @@ main .show .button-open {
   font-weight: 700;
   margin-top: 30px;
   box-shadow: 2px 2px 10px #08a6e4;
+  font-family: "Open Sans", sans-serif;
 }
 main .show .img-main img {
   box-sizing: border-box;
@@ -133,6 +138,7 @@ main .cards article .cards-title {
 main .cards article .cards-text {
   margin: 20px;
   padding-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
 }
 main .cards article .cards-red-line {
   display: none;
@@ -231,6 +237,7 @@ main .sale .sale-text p:nth-child(1) {
 main .sale .sale-text p:nth-child(2) {
   font-weight: 300;
   font-size: 46px;
+  font-family: "Open Sans", sans-serif;
 }
 main .sale .sale-text p:nth-child(3) {
   font-size: 12px;
@@ -249,6 +256,7 @@ main .sale .sale-list {
   font-size: 14px;
   margin: 25px auto;
   float: right;
+  font-family: "Open Sans", sans-serif;
 }
 main .sale .sale-list ul {
   margin-top: 25px;
@@ -284,15 +292,16 @@ main .sale .button-green {
   background-color: #55dfb4;
 }
 main .contact {
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
   max-width: 375px;
+  font-family: "Open Sans", sans-serif;
 }
 main .contact .contact-title {
   margin-left: 25px;
 }
 main .contact h6 {
   font-size: 40px;
+  font-family: "Raleway", sans-serif;
 }
 main .contact .contact-line {
   margin: 40px 0;
@@ -312,17 +321,17 @@ main .contact .contact-line p {
   position: relative;
   bottom: 7px;
 }
-main .contact .contact-line .contact-padding {
+main .contact .contact-padding {
   padding-top: 30px;
 }
-main .contact .contact-line .contact-line-label {
+main .contact .contact-line-label {
   color: #08a6e4;
   font-size: 11px;
   font-weight: 600;
   margin-top: 40px;
   margin-left: 30px;
 }
-main .contact .contact-line .contact-line-input {
+main .contact .contact-line-input {
   border: none;
   border-bottom: #95989a solid 2px;
   width: 280px;
@@ -336,7 +345,6 @@ main .contact .contact-terms {
 main .contact .contact-terms input {
   float: left;
   margin-right: 10px;
-  border-radius: 0%;
 }
 main .contact .contact-terms label {
   color: #a5a5a5;
@@ -508,5 +516,158 @@ footer .foot-social .foot-social-facebook {
     margin-left: 20px;
     height: 2px;
     display: inline-block;
+  }
+  main .cards article:nth-child(3) {
+    background-color: #a5a5a5;
+    max-width: 1124px;
+    display: flex;
+    height: 370px;
+    padding: 0;
+    justify-content: space-between;
+  }
+  main .cards article:nth-child(3) .cards-hypertext {
+    width: 60%;
+    max-width: 660px;
+    text-align: left;
+    background-color: white;
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .cards article:nth-child(3) .cards-hypertext .cards-title {
+    margin: 20px;
+    font-size: 30px;
+  }
+  main .cards article:nth-child(3) .cards-hypertext .cards-text {
+    margin: 20px;
+    padding-bottom: 10px;
+  }
+  main .cards article:nth-child(3) .cards-hypertext .cards-green-line {
+    width: 327px;
+    border-color: #55dfb4;
+    background-color: #55dfb4;
+    margin-top: 50px;
+    margin-left: 20px;
+    height: 2px;
+    display: inline-block;
+  }
+  main .cards article:nth-child(3) .cards-background-green {
+    background-color: #55dfb4;
+    height: 370px;
+  }
+  main .cards article:nth-child(3) .cards-background-green img {
+    margin-top: 25px;
+    width: 440px;
+  }
+  main .sale {
+    margin: auto;
+    padding-bottom: 30px;
+  }
+  main .sale .sale-div {
+    display: flex;
+    justify-content: space-around;
+  }
+  main .sale .sale-div article {
+    height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  main .sale .sale-div article .sale-margin-red {
+    margin-left: 0px;
+  }
+  main .sale .sale-div article .sale-margin-blue {
+    margin-left: 0px;
+  }
+  main .sale .sale-div article .sale-margin-green {
+    margin-left: 0px;
+  }
+  main .sale .sale-div article .sale-text {
+    padding: 0;
+  }
+  main .sale .sale-div article .sale-list {
+    text-align: center;
+  }
+  main .sale .sale-div article .sale-list ul {
+    margin-right: 0px;
+  }
+  main .sale .sale-div article .sale-list ul li {
+    text-align: center;
+  }
+  .contact {
+    display: flex;
+    justify-content: center;
+    max-width: none;
+  }
+  .contact .contact-informatio-first {
+    min-width: 360px;
+    margin-right: 113px;
+  }
+  .contact .contact-informatio-first .contact-title {
+    margin-left: 0;
+  }
+  .contact .contact-informatio-first .contact-title p {
+    margin-bottom: 42px;
+  }
+  .contact .contact-informatio-first h6 {
+    margin: 22px 0;
+    font-size: 49px;
+  }
+  .contact .contact-informatio-first .contact-line {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  .contact .contact-informatio-first .contact-line .contact-email {
+    display: flex;
+    margin: 0;
+  }
+  .contact .contact-informatio-first .contact-line .contact-email img {
+    width: 22px;
+  }
+  .contact .contact-informatio-first .contact-line .contact-email p {
+    margin-left: 3px;
+    position: static;
+  }
+  .contact .contact-informatio-first .contact-line .contact-number {
+    display: flex;
+    margin: 0;
+  }
+  .contact .contact-informatio-first .contact-line .contact-number img {
+    width: 22px;
+    margin-left: 23px;
+  }
+  .contact .contact-informatio-first .contact-line .contact-number p {
+    margin-left: 3px;
+    position: static;
+  }
+  .contact .contact-informatio-second {
+    min-width: 440px;
+  }
+  .contact .contact-informatio-second .contact-line-label {
+    margin-left: 0px;
+  }
+  .contact .contact-informatio-second .contact-line-input {
+    width: 440px;
+    margin-left: 0px;
+  }
+  .contact .contact-informatio-second .contact-terms {
+    margin: 0;
+    width: 100%;
+  }
+  .contact .contact-informatio-second .contact-terms input {
+    float: left;
+    margin-right: 10px;
+  }
+  .contact .contact-informatio-second .contact-terms label {
+    color: #a5a5a5;
+    display: inline-block;
+    width: 90%;
+  }
+  .contact .contact-informatio-second .contact-button {
+    display: flex;
+    justify-content: end;
   }
 }/*# sourceMappingURL=style.css.map */
