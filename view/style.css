@@ -26,10 +26,27 @@ header .menu {
   display: none;
   height: 100%;
 }
-header .icon {
-  color: #55acee;
+header .menu__hamburguesa {
   float: right;
-  margin: 29px 20px 39px 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+header .menu__hamburguesa .hamburguesa__menu {
+  list-style: none;
+}
+header .menu__hamburguesa span {
+  display: block;
+  background-color: #08a6e4;
+  height: 4px;
+  width: 40px;
+  margin-top: 6px;
+}
+
+.display_none {
+  display: none;
 }
 
 main {
