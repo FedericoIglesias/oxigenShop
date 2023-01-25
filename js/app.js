@@ -1,20 +1,21 @@
 let menu = document.getElementById('hamburguesa__menu');
-
-document.getElementById('menuBtn').onclick = function(){
-    if(menu.getAttribute('class').includes('display_none')){
-        menu.setAttribute('class','hamburguesa__menu')
-    }else{
-        menu.setAttribute('class','hamburguesa__menu display_none')
+let foot = document.getElementById('footer')
+let bar =  document.getElementById('percentage__scroller')
+//menu mobile
+document.getElementById('menuBtn').onclick = function () {
+    if (menu.getAttribute('class').includes('display_none')) {
+        menu.setAttribute('class', 'hamburguesa__menu')
+    } else {
+        menu.setAttribute('class', 'hamburguesa__menu display_none')
     }
 }
-/*document
-.querySelector('#menuBtn')
-.addEventListener('click',() =>{
-    let menu = document.getElementById('hamburguesa__menu');
-    menu.
-    if(menu.getAttribute('class').includes('display_block')){
-        menu.setAttribute('class',"hamburguesa__menu display_block" )
-    }else{
-        menu.setAttribute('class',"hamburguesa__menu" )
-    }
-})*/
+
+
+//percentage scroller
+let percentageScroller = () => {
+    let ubi = Math.floor(-((((foot.getBoundingClientRect().top)-665)/43.98)-101))
+    bar.setAttribute('style', 'width: ' + ubi + '%')
+}
+
+
+window.addEventListener('scroll', percentageScroller)
