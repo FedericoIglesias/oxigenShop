@@ -10,6 +10,99 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+.backgroundGrey {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 290;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.popUp {
+  margin: 50px auto;
+  width: 50%;
+  height: 70%;
+  z-index: 300;
+  position: fixed;
+  left: 25%;
+  background-color: white;
+  border: black solid 1px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 10px 10px 10px black;
+}
+.popUp .popUp__cross {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+  margin-top: 4px;
+}
+.popUp .popUp__cross span {
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #08a6e4;
+  margin: 3px;
+  margin-right: 10px;
+  float: inline-end;
+}
+.popUp .popUp__cross .cross__line1 {
+  transform: rotate(45deg);
+  position: relative;
+  top: 3px;
+  left: 1px;
+}
+.popUp .popUp__cross .cross__line2 {
+  transform: rotate(-45deg);
+  position: relative;
+  bottom: 5px;
+  left: 1px;
+}
+.popUp p {
+  text-align: center;
+  color: #08a6e4;
+  font-weight: 700;
+}
+.popUp .popUp__form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+}
+.popUp .popUp__form .popUp__mail {
+  color: #08a6e4;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 600;
+  margin-left: 5px;
+}
+.popUp .popUp__form .popUp__mail .mail__leter {
+  text-align: left;
+}
+.popUp .popUp__form .popUp__input {
+  width: 90%;
+  margin-left: 5px;
+  border: none;
+  border-bottom: #95989a 1px solid;
+}
+.popUp button {
+  width: 70%;
+  padding: 20px 0;
+  border-radius: 50px;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: #08a6e4;
+  border: none;
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
 .percentage__scroller {
   z-index: 100;
   background-color: #08a6e4;
@@ -439,6 +532,16 @@ footer .foot-social .foot-social-facebook {
 }
 
 @media (min-width: 1000px) {
+  .popUp p {
+    font-size: 50px;
+  }
+  .popUp .popUp__mail {
+    margin-bottom: 20px;
+  }
+  .popUp .popUp__mail .mail__leter {
+    font-size: 25px;
+    text-align: left;
+  }
   header {
     max-width: 90%;
     height: 70px;

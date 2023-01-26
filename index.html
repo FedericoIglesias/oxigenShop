@@ -11,7 +11,25 @@
 </head>
 
 <body>
+    <!-- Newsletter -->
+    <div class="backgroundGrey display_none" id="backgroundGrey"></div>
+    <div class="popUp display_none" id="popUp">
+        <div class='popUp__cross' id="popUp__cross">
+            <span class="cross__line1"></span>
+            <span class="cross__line2"></span>
+        </div>
+        <p>Subscribe to our newsletter</p>
+        <div class="popUp__form">
+            <label for="" class="popUp__mail">
+                <p class="mail__leter">EMAIL</p>
+            </label>
+            <input type="text" class="popUp__input" id="popUp__input">
+        </div>
+        <button id="popUp__send">Send</button>
+    </div>
+    <!-- bar percentage -->
     <div class='percentage__scroller' id="percentage__scroller"></div>
+    <!-- button to up -->
     <div><img src="img/cohete.png" alt="cohete" class="button__up display_none" id="button__up"></div>
     <header>
         <h1>OXYGENShop</h1>
@@ -213,7 +231,7 @@
                 </div>
                 <div class="contact-terms">
                     <label class="contact__checkbox" id="contact__checkbox">
-                        <input type="checkbox" name="checkedbox" class="checkbox__input" id="checkbox__input" >
+                        <input type="checkbox" name="checkedbox" class="checkbox__input" id="checkbox__input">
                     </label>
                     <label for="">I hereby give consent for my personal data
                         included in my application to be processed for the purposes of the recruitment process under

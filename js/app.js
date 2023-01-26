@@ -6,11 +6,36 @@ let ubi;
 let formName = document.getElementById('contact-line-name')
 let formMail = document.getElementById('contact-line-mail')
 let formValidation = document.getElementById('button__send')
-let formatMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;;
+let formatMail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 let checkboxInput = document.getElementById('checkbox__input')
 let checkboxDiv = document.getElementById('contact__checkbox')
+let popUp = document.getElementById('popUp')
+let backgroundGrey = document.getElementById('backgroundGrey')
+let help = 0;
+let cross = document.getElementById('popUp__cross')
+let popUpMail = document.getElementById('popUp__input')
+let popUpSend = document.getElementById('popUp__send')
 
+// alert!!! suscribe to our newsletter
+window.setTimeout(() => {
+    if(help == 0){backgroundGrey.setAttribute('class', 'backgroundGrey'),popUp.setAttribute('class', 'popUp'), help = 1}
+},5000)
 
+backgroundGrey.onclick = () => {
+    backgroundGrey.setAttribute('class', 'backgroundGrey display_none');
+    popUp.setAttribute('class', 'popUp display_none');
+}
+cross.onclick = () => {
+    backgroundGrey.setAttribute('class', 'backgroundGrey display_none');
+    popUp.setAttribute('class', 'popUp display_none');
+}
+
+popUpSend.onclick = ()  => {
+    let name = popUpMail
+    if (!(popUpMail.value.match(formatMail))) { popUpMail.setAttribute('style', 'border: red 2px solid') }
+    else { console.log('to  piola vroooooooo el mail'),backgroundGrey.setAttribute('class', 'backgroundGrey display_none'),popUp.setAttribute('class', 'popUp display_none')} 
+    
+};
 
 
 //menu mobile
@@ -30,8 +55,9 @@ let percentageScroller = () => {
     if (ubi >= 65) {
         buttonUp.setAttribute('class', 'button__up')
     } else { buttonUp.setAttribute('class', 'button__up display_none') }
+    if(help == 0 && ubi >=25){{backgroundGrey.setAttribute('class', 'backgroundGrey'),popUp.setAttribute('class', 'popUp'), help = 1}}; 
 };
-
+;
 window.addEventListener('scroll', percentageScroller);
 
 //function button up
