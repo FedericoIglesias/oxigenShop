@@ -11,6 +11,8 @@
 </head>
 
 <body>
+    <div class='percentage__scroller' id="percentage__scroller"></div>
+    <div><img src="img/cohete.png" alt="cohete" class="button__up display_none" id="button__up"></div>
     <header>
         <h1>OXYGENShop</h1>
         <div class="menu__hamburguesa" id="menuBtn">
@@ -202,15 +204,17 @@
                 <div class="contact-padding">
                     <label for="" class="contact-line-label">NAME</label>
                     <br>
-                    <input type="text" class="contact-line-input">
+                    <input type="text" class="contact-line-input " id="contact-line-name">
                     <br>
                     <label for="" class="contact-line-label">EMAIL</label>
                     <br>
-                    <input type="text" class="contact-line-input">
+                    <input type="text" class="contact-line-input " id="contact-line-mail">
                     <br>
                 </div>
                 <div class="contact-terms">
-                    <input type="radio" name="checked" id="">
+                    <label class="contact__checkbox" id="contact__checkbox">
+                        <input type="checkbox" name="checkedbox" class="checkbox__input" id="checkbox__input" >
+                    </label>
                     <label for="">I hereby give consent for my personal data
                         included in my application to be processed for the purposes of the recruitment process under
                         the
@@ -220,13 +224,13 @@
                         movement
                         of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
                 </div>
-                <div class="contact-button">
+                <div class="contact-button" id="button__send">
                     <button>Send</button>
                 </div>
             </div>
         </section>
     </main>
-    <Footer>
+    <Footer id="footer">
         <section>
             <div class="foot-title">
                 <h1>OXYGENShop</h1>

@@ -10,6 +10,23 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+.percentage__scroller {
+  z-index: 100;
+  background-color: #08a6e4;
+  height: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.button__up {
+  z-index: 30;
+  position: fixed;
+  bottom: 300px;
+  right: 10px;
+  width: 100px;
+}
+
 header {
   max-width: 375px;
   margin: 0 auto;
@@ -43,10 +60,6 @@ header .menu__hamburguesa span {
   height: 4px;
   width: 40px;
   margin-top: 6px;
-}
-
-.display_none {
-  display: none;
 }
 
 main {
@@ -356,13 +369,21 @@ main .contact .contact-line-input {
   margin-left: 30px;
   margin-bottom: 40px;
 }
+main .contact .border__error {
+  border: red solid 2px;
+}
 main .contact .contact-terms {
   margin: auto;
   width: 80%;
 }
-main .contact .contact-terms input {
+main .contact .contact-terms .contact__checkbox {
   float: left;
-  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+main .contact .contact-terms .contact__checkbox .checkbox__input {
+  width: 15px;
+  height: 15px;
 }
 main .contact .contact-terms label {
   color: #a5a5a5;
@@ -411,6 +432,10 @@ footer .foot-social .foot-social-facebook {
   color: #3b5998;
   font-size: 24px;
   margin-left: 20px;
+}
+
+.display_none {
+  display: none;
 }
 
 @media (min-width: 1000px) {
@@ -478,7 +503,7 @@ footer .foot-social .foot-social-facebook {
     border-color: #fb3b64;
     background-color: #fb3b64;
     margin-top: 50px;
-    height: 2px;
+    height: 4px;
     display: block;
   }
   main .cards article:nth-child(1) .cards-container-div-img {
@@ -541,7 +566,7 @@ footer .foot-social .foot-social-facebook {
     background-color: #08a6e4;
     margin-top: 50px;
     margin-left: 20px;
-    height: 2px;
+    height: 4px;
     display: inline-block;
   }
   main .cards article:nth-child(3) {
@@ -576,7 +601,7 @@ footer .foot-social .foot-social-facebook {
     background-color: #55dfb4;
     margin-top: 50px;
     margin-left: 20px;
-    height: 2px;
+    height: 4px;
     display: inline-block;
   }
   main .cards article:nth-child(3) .cards-background-green {
