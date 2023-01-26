@@ -11,15 +11,43 @@ let checkboxInput = document.getElementById('checkbox__input')
 let checkboxDiv = document.getElementById('contact__checkbox')
 let popUp = document.getElementById('popUp')
 let backgroundGrey = document.getElementById('backgroundGrey')
-let help = 0;
+let help = 1;
 let cross = document.getElementById('popUp__cross')
 let popUpMail = document.getElementById('popUp__input')
 let popUpSend = document.getElementById('popUp__send')
+let slider = [{
+    slider: document.getElementById('slider__1'),
+    number: 1,
+    button: document.getElementById('select__1')
+},
+    {
+    slider: document.getElementById('slider__2'),
+    number: 2,
+    button: document.getElementById('select__2')
+},
+        {
+    slider: document.getElementById('slider__3'),
+    number: 3,
+    button: document.getElementById('select__3')
+},
+            {
+    slider: document.getElementById('slider__4'),
+    number: 4,
+    button: document.getElementById('select__4')
+},
+                {
+    slider: document.getElementById('slider__5'),
+    number: 5,
+    button: document.getElementById('select__5')
+}]
+
+
+
 
 // alert!!! suscribe to our newsletter
 window.setTimeout(() => {
-    if(help == 0){backgroundGrey.setAttribute('class', 'backgroundGrey'),popUp.setAttribute('class', 'popUp'), help = 1}
-},5000)
+    if (help == 0) { backgroundGrey.setAttribute('class', 'backgroundGrey'), popUp.setAttribute('class', 'popUp'), help = 1 }
+}, 5000)
 
 backgroundGrey.onclick = () => {
     backgroundGrey.setAttribute('class', 'backgroundGrey display_none');
@@ -30,11 +58,11 @@ cross.onclick = () => {
     popUp.setAttribute('class', 'popUp display_none');
 }
 
-popUpSend.onclick = ()  => {
+popUpSend.onclick = () => {
     let name = popUpMail
     if (!(popUpMail.value.match(formatMail))) { popUpMail.setAttribute('style', 'border: red 2px solid') }
-    else { console.log('to  piola vroooooooo el mail'),backgroundGrey.setAttribute('class', 'backgroundGrey display_none'),popUp.setAttribute('class', 'popUp display_none')} 
-    
+    else { console.log('to  piola vroooooooo el mail'), backgroundGrey.setAttribute('class', 'backgroundGrey display_none'), popUp.setAttribute('class', 'popUp display_none') }
+
 };
 
 
@@ -53,9 +81,9 @@ let percentageScroller = () => {
     ubi = Math.floor(-((((foot.getBoundingClientRect().top) - 665) / 43.98) - 101))
     bar.setAttribute('style', 'width: ' + ubi + '%');
     if (ubi >= 65) {
-        buttonUp.setAttribute('class', 'button__up')
+        //buttonUp.setAttribute('class', 'button__up')
     } else { buttonUp.setAttribute('class', 'button__up display_none') }
-    if(help == 0 && ubi >=25){{backgroundGrey.setAttribute('class', 'backgroundGrey'),popUp.setAttribute('class', 'popUp'), help = 1}}; 
+    if (help == 0 && ubi >= 25) { { backgroundGrey.setAttribute('class', 'backgroundGrey'), popUp.setAttribute('class', 'popUp'), help = 1 } };
 };
 ;
 window.addEventListener('scroll', percentageScroller);
@@ -74,17 +102,18 @@ buttonUp.onclick = function () {
 //Validation the form
 formValidation.onclick = function () {
     let auxName = formName.value.length
-    if (auxName <= 1 || auxName >= 101) {formName.setAttribute('class', 'contact-line-input border__error')}
+    if (auxName <= 1 || auxName >= 101) { formName.setAttribute('class', 'contact-line-input border__error') }
     else { console.log('to  piola vroooooooo'), formName.setAttribute('class', 'contact-line-input') }
     //----------
     if (!(formMail.value.match(formatMail))) { formMail.setAttribute('class', 'contact-line-input border__error') }
     else { console.log('to  piola vroooooooo el mail'), formMail.setAttribute('class', 'contact-line-input') }
     //----------
-    if(checkboxInput.checked){ checkboxDiv.setAttribute('style', 'background-color: red')}
-    else{checkboxDiv.setAttribute('style', 'background-color: red')
+    if (checkboxInput.checked) { checkboxDiv.setAttribute('style', 'background-color: red') }
+    else {
+        checkboxDiv.setAttribute('style', 'background-color: red')
     }
 
-    sendForm(formName,formMail)
+    sendForm(formName, formMail)
 }
 
 // Send  validation form
@@ -103,3 +132,6 @@ const sendForm = async (name, email) => {
         .then((response) => response.json())
         .then((json) => console.log(json));
 }
+
+
+//slider 
