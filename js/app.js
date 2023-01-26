@@ -15,33 +15,31 @@ let help = 1;
 let cross = document.getElementById('popUp__cross')
 let popUpMail = document.getElementById('popUp__input')
 let popUpSend = document.getElementById('popUp__send')
-let slider = [{
+/* let sliderone = {
     slider: document.getElementById('slider__1'),
+    select: document.getElementById('select__1'),
     number: 1,
-    button: document.getElementById('select__1')
-},
-    {
+}
+let sliderTwo = {
     slider: document.getElementById('slider__2'),
+    select: document.getElementById('select__2'),
     number: 2,
-    button: document.getElementById('select__2')
-},
-        {
+}
+let sliderThree = {
     slider: document.getElementById('slider__3'),
+    select: document.getElementById('select__3'),
     number: 3,
-    button: document.getElementById('select__3')
-},
-            {
+}
+let sliderone = {
     slider: document.getElementById('slider__4'),
+    select: document.getElementById('select__4'),
     number: 4,
-    button: document.getElementById('select__4')
-},
-                {
+}
+let sliderone = {
     slider: document.getElementById('slider__5'),
+    select: document.getElementById('select__5'),
     number: 5,
-    button: document.getElementById('select__5')
-}]
-
-
+} */
 
 
 // alert!!! suscribe to our newsletter
@@ -135,3 +133,47 @@ const sendForm = async (name, email) => {
 
 
 //slider 
+
+
+let count = 1
+
+window.setInterval (function () {
+    console.log(count)
+    document.getElementById('slider__1').setAttribute('class','img__slider display_none')
+    document.getElementById('slider__2').setAttribute('class','img__slider display_none')
+    document.getElementById('slider__3').setAttribute('class','img__slider display_none')
+    document.getElementById('slider__4').setAttribute('class','img__slider display_none')
+    document.getElementById('slider__5').setAttribute('class','img__slider display_none')
+    switch(count){
+        case 1: count +=1;
+        document
+        .getElementById('slider__1')
+        .setAttribute('class','img__slider')
+        break;
+        case 2: count +=1;
+        document
+        .getElementById('slider__2')
+        .setAttribute('class','img__slider')
+        break;
+        case 3: count +=1;
+        document
+        .getElementById('slider__3')
+        .setAttribute('class','img__slider')
+        break;
+        case 4: count +=1;
+        document
+        .getElementById('slider__4')
+        .setAttribute('class','img__slider')
+        break;
+        case 5: count = 1;
+        document
+        .getElementById('slider__5')
+        .setAttribute('class','img__slider')
+        break;
+    }
+},5000)
+
+
+/* document.getElementById('slider__'+ (i - 1) ).getAttribute('class','img__slider display_none')
+document.getElementById('slider__'+ (i + 1)).getAttribute('class','img__slider display_none')
+document.getElementById('slider__'+ i ).getAttribute('class','img__slider') */
