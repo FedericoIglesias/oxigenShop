@@ -137,43 +137,73 @@ const sendForm = async (name, email) => {
 
 let count = 1
 
-window.setInterval (function () {
-    console.log(count)
-    document.getElementById('slider__1').setAttribute('class','img__slider display_none')
-    document.getElementById('slider__2').setAttribute('class','img__slider display_none')
-    document.getElementById('slider__3').setAttribute('class','img__slider display_none')
-    document.getElementById('slider__4').setAttribute('class','img__slider display_none')
-    document.getElementById('slider__5').setAttribute('class','img__slider display_none')
-    switch(count){
-        case 1: count +=1;
-        document
-        .getElementById('slider__1')
-        .setAttribute('class','img__slider')
-        break;
-        case 2: count +=1;
-        document
-        .getElementById('slider__2')
-        .setAttribute('class','img__slider')
-        break;
-        case 3: count +=1;
-        document
-        .getElementById('slider__3')
-        .setAttribute('class','img__slider')
-        break;
-        case 4: count +=1;
-        document
-        .getElementById('slider__4')
-        .setAttribute('class','img__slider')
-        break;
-        case 5: count = 1;
-        document
-        .getElementById('slider__5')
-        .setAttribute('class','img__slider')
-        break;
+    let go = () => {
+        console.log(count)
+        document.getElementById('slider__1').setAttribute('class', 'img__slider display_none')
+        document.getElementById('slider__2').setAttribute('class', 'img__slider display_none')
+        document.getElementById('slider__3').setAttribute('class', 'img__slider display_none')
+        document.getElementById('slider__4').setAttribute('class', 'img__slider display_none')
+        document.getElementById('slider__5').setAttribute('class', 'img__slider display_none')
+        document.getElementById('select__1').setAttribute('class', 'select__design')
+        document.getElementById('select__2').setAttribute('class', 'select__design')
+        document.getElementById('select__3').setAttribute('class', 'select__design')
+        document.getElementById('select__4').setAttribute('class', 'select__design')
+        document.getElementById('select__5').setAttribute('class', 'select__design')
+        switch (count) {
+            case 1: count += 1;
+                document
+                    .getElementById('slider__1')
+                    .setAttribute('class', 'img__slider')
+                document
+                    .getElementById('select__1')
+                    .setAttribute('class', 'select__design background__white')
+                break;
+            case 2: count += 1;
+                document
+                    .getElementById('slider__2')
+                    .setAttribute('class', 'img__slider')
+                document
+                    .getElementById('select__2')
+                    .setAttribute('class', 'select__design background__white')
+                break;
+            case 3: count += 1;
+                document
+                    .getElementById('slider__3')
+                    .setAttribute('class', 'img__slider')
+                document
+                    .getElementById('select__3')
+                    .setAttribute('class', 'select__design background__white')
+                break;
+            case 4: count += 1;
+                document
+                    .getElementById('slider__4')
+                    .setAttribute('class', 'img__slider')
+                document
+                    .getElementById('select__4')
+                    .setAttribute('class', 'select__design background__white')
+                break;
+            default: count = 1;
+                document
+                    .getElementById('slider__5')
+                    .setAttribute('class', 'img__slider')
+                document
+                    .getElementById('select__5')
+                    .setAttribute('class', 'select__design background__white')
+                break;
+        }
     }
-},5000)
 
 
-/* document.getElementById('slider__'+ (i - 1) ).getAttribute('class','img__slider display_none')
-document.getElementById('slider__'+ (i + 1)).getAttribute('class','img__slider display_none')
-document.getElementById('slider__'+ i ).getAttribute('class','img__slider') */
+
+window.setInterval(function(){go()},3000 )
+
+
+document.getElementById('select__1').onclick = function(){count = 1; go()};
+document.getElementById('select__2').onclick = function(){count = 2; go()};
+document.getElementById('select__3').onclick = function(){count = 3; go()};
+document.getElementById('select__4').onclick = function(){count = 4; go()};
+document.getElementById('select__5').onclick = function(){count = 5; go()};
+
+
+document.getElementById('arrow__prev').onclick = function(){if(count == 1){count = 4; go()}else{count = count - 2; go()}};
+document.getElementById('arrow__next').onclick = function(){go()};;
