@@ -118,8 +118,13 @@ body {
 }
 header {
     margin: 0 auto;
-    position: relative;
+    position: fixed;
+
+    top: 0;
     padding: 20px 20px 50px;
+    background-color: white;
+    z-index: 10;
+    width: 100%;
     h1 {
         color: #08a6e4;
         font-weight: 300;
@@ -164,11 +169,13 @@ header {
         display: none;
     }
 }
+.box__shadow{
+        box-shadow: 1px 0 1px black;
+}
 main {
+    margin-top: 50px;
     box-shadow: inset 0 1px 10px;
-    align-items: center;
     clear: both;
-    justify-content: center;
     .show {
         padding: 30px 0;
         text-align: center;
@@ -332,6 +339,18 @@ main {
             font-size: 36px;
             margin: 55px 0 15px;
         }
+        .currency{
+            text-align: center;
+            .currency__table{
+                font-size: 20px;
+                width: 100px;
+                .currency__option{
+                    width: 50px;
+                    font-size: 10px;
+                }
+            }
+        }
+
         article {
             margin: 50px auto;
             width: 90%;
@@ -342,15 +361,27 @@ main {
         .sale-red {
             border: #fb3b64 solid 1px;
             border-radius: 10px;
+            box-shadow: 1px 1px 1px 1px 1px #fb3b64;
         }
+        .sale-red:hover {
+            transform: scale(110%);
+            box-shadow: 4px 4px 14px 1px #fb3b64;}
         .sale-green {
             border: #55dfb4 solid 1px;
             border-radius: 10px;
         }
+        .sale-green:hover {
+            transform: scale(110%);
+
+            box-shadow: 4px 4px 14px 1px #55dfb4;}
         .sale-blue {
             border: #08a6e4 solid 1px;
             border-radius: 10px;
         }
+        .sale-blue:hover {
+            transform: scale(110%);
+
+            box-shadow: 4px 4px 14px 1px #08a6e4;}
         .sale-margin-red {
             margin-left: 60px;
         }

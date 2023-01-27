@@ -15,31 +15,7 @@ let help = 1;
 let cross = document.getElementById('popUp__cross')
 let popUpMail = document.getElementById('popUp__input')
 let popUpSend = document.getElementById('popUp__send')
-/* let sliderone = {
-    slider: document.getElementById('slider__1'),
-    select: document.getElementById('select__1'),
-    number: 1,
-}
-let sliderTwo = {
-    slider: document.getElementById('slider__2'),
-    select: document.getElementById('select__2'),
-    number: 2,
-}
-let sliderThree = {
-    slider: document.getElementById('slider__3'),
-    select: document.getElementById('select__3'),
-    number: 3,
-}
-let sliderone = {
-    slider: document.getElementById('slider__4'),
-    select: document.getElementById('select__4'),
-    number: 4,
-}
-let sliderone = {
-    slider: document.getElementById('slider__5'),
-    select: document.getElementById('select__5'),
-    number: 5,
-} */
+
 
 
 // alert!!! suscribe to our newsletter
@@ -68,8 +44,10 @@ popUpSend.onclick = () => {
 document.getElementById('menuBtn').onclick = function () {
     if (menu.getAttribute('class').includes('display_none')) {
         menu.setAttribute('class', 'menu')
+        document.getElementById('header').setAttribute('class', '')
     } else {
         menu.setAttribute('class', 'menu display_none')
+        document.getElementById('header').setAttribute('class', 'box__shadow')
     }
 }
 
@@ -137,72 +115,116 @@ const sendForm = async (name, email) => {
 
 let count = 1
 
-    let go = () => {
-        document.getElementById('slider__1').setAttribute('class', 'img__slider display_none')
-        document.getElementById('slider__2').setAttribute('class', 'img__slider display_none')
-        document.getElementById('slider__3').setAttribute('class', 'img__slider display_none')
-        document.getElementById('slider__4').setAttribute('class', 'img__slider display_none')
-        document.getElementById('slider__5').setAttribute('class', 'img__slider display_none')
-        document.getElementById('select__1').setAttribute('class', 'select__design')
-        document.getElementById('select__2').setAttribute('class', 'select__design')
-        document.getElementById('select__3').setAttribute('class', 'select__design')
-        document.getElementById('select__4').setAttribute('class', 'select__design')
-        document.getElementById('select__5').setAttribute('class', 'select__design')
-        switch (count) {
-            case 1: count += 1;
-                document
-                    .getElementById('slider__1')
-                    .setAttribute('class', 'img__slider')
-                document
-                    .getElementById('select__1')
-                    .setAttribute('class', 'select__design background__white')
-                break;
-            case 2: count += 1;
-                document
-                    .getElementById('slider__2')
-                    .setAttribute('class', 'img__slider')
-                document
-                    .getElementById('select__2')
-                    .setAttribute('class', 'select__design background__white')
-                break;
-            case 3: count += 1;
-                document
-                    .getElementById('slider__3')
-                    .setAttribute('class', 'img__slider')
-                document
-                    .getElementById('select__3')
-                    .setAttribute('class', 'select__design background__white')
-                break;
-            case 4: count += 1;
-                document
-                    .getElementById('slider__4')
-                    .setAttribute('class', 'img__slider')
-                document
-                    .getElementById('select__4')
-                    .setAttribute('class', 'select__design background__white')
-                break;
-            default: count = 1;
-                document
-                    .getElementById('slider__5')
-                    .setAttribute('class', 'img__slider')
-                document
-                    .getElementById('select__5')
-                    .setAttribute('class', 'select__design background__white')
-                break;
-        }
+let go = () => {
+    document.getElementById('slider__1').setAttribute('class', 'img__slider display_none')
+    document.getElementById('slider__2').setAttribute('class', 'img__slider display_none')
+    document.getElementById('slider__3').setAttribute('class', 'img__slider display_none')
+    document.getElementById('slider__4').setAttribute('class', 'img__slider display_none')
+    document.getElementById('slider__5').setAttribute('class', 'img__slider display_none')
+    document.getElementById('select__1').setAttribute('class', 'select__design')
+    document.getElementById('select__2').setAttribute('class', 'select__design')
+    document.getElementById('select__3').setAttribute('class', 'select__design')
+    document.getElementById('select__4').setAttribute('class', 'select__design')
+    document.getElementById('select__5').setAttribute('class', 'select__design')
+    switch (count) {
+        case 1: count += 1;
+            document
+                .getElementById('slider__1')
+                .setAttribute('class', 'img__slider')
+            document
+                .getElementById('select__1')
+                .setAttribute('class', 'select__design background__white')
+            break;
+        case 2: count += 1;
+            document
+                .getElementById('slider__2')
+                .setAttribute('class', 'img__slider')
+            document
+                .getElementById('select__2')
+                .setAttribute('class', 'select__design background__white')
+            break;
+        case 3: count += 1;
+            document
+                .getElementById('slider__3')
+                .setAttribute('class', 'img__slider')
+            document
+                .getElementById('select__3')
+                .setAttribute('class', 'select__design background__white')
+            break;
+        case 4: count += 1;
+            document
+                .getElementById('slider__4')
+                .setAttribute('class', 'img__slider')
+            document
+                .getElementById('select__4')
+                .setAttribute('class', 'select__design background__white')
+            break;
+        default: count = 1;
+            document
+                .getElementById('slider__5')
+                .setAttribute('class', 'img__slider')
+            document
+                .getElementById('select__5')
+                .setAttribute('class', 'select__design background__white')
+            break;
     }
+}
 
 
 
-window.setInterval(function(){go()},3000 )
+window.setInterval(function () { go() }, 3000)
 
 
-document.getElementById('select__1').onclick = function(){count = 1; go()};
-document.getElementById('select__2').onclick = function(){count = 2; go()};
-document.getElementById('select__3').onclick = function(){count = 3; go()};
-document.getElementById('select__4').onclick = function(){count = 4; go()};
-document.getElementById('select__5').onclick = function(){count = 5; go()};
+document.getElementById('select__1').onclick = function () { count = 1; go() };
+document.getElementById('select__2').onclick = function () { count = 2; go() };
+document.getElementById('select__3').onclick = function () { count = 3; go() };
+document.getElementById('select__4').onclick = function () { count = 4; go() };
+document.getElementById('select__5').onclick = function () { count = 5; go() };
 
 
-document.getElementById('arrow__prev').onclick = function(){if(count == 1){count = 4; go()}else{count = count - 2; go()}};
-document.getElementById('arrow__next').onclick = function(){go()};
+document.getElementById('arrow__prev').onclick = function () { if (count == 1) { count = 4; go() } else { count = count - 2; go() } };
+document.getElementById('arrow__next').onclick = function () { go() };
+
+
+
+//bitch, give me money
+
+let getValue = () => {
+    fetch('https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/eur.json',)
+        .then(response => response.json())
+        .then(data => {
+            let valueBlue = 0;
+            let valueGreen = 0;
+            switch (document.getElementById('currency').value) {
+                case 'gbp':
+                    valueGreen = data.eur.gbp * 60;
+                    valueBlue = data.eur.gbp * 25;
+                    document.getElementById('value__symbol').innerHTML = '£';
+                    document.getElementById('value__green').innerHTML = Math.floor(valueGreen);
+                    document.getElementById('value__blue').innerHTML = Math.floor(valueBlue);
+                    break;
+                case 'usd':
+                    valueGreen = data.eur.usd * 60;
+                    valueBlue = data.eur.usd * 25;
+                    document.getElementById('value__symbol').innerHTML = '$';
+                    document.getElementById('value__green').innerHTML = Math.floor(valueGreen)
+                    document.getElementById('value__blue').innerHTML = Math.floor(valueBlue)
+                    break;
+                default:
+                    document.getElementById('value__symbol').innerHTML = '€';
+                    document.getElementById('value__green').innerHTML = 60
+                    document.getElementById('value__blue').innerHTML = 25
+            }
+        })
+};
+
+
+document.getElementById('currency').onclick = (getValue)
+
+// innerHTML
+
+// console.log(document.getElementById('currency').value)
+
+
+
+

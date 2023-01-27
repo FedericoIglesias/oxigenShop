@@ -31,7 +31,7 @@
     <div class='percentage__scroller' id="percentage__scroller"></div>
     <!-- button to up -->
     <div><img src="img/cohete.png" alt="cohete" class="button__up display_none" id="button__up"></div>
-    <header>
+    <header class="box__shadow" id="header">
         <h1>OXYGENShop</h1>
         <div class="menu__hamburguesa" id="menuBtn">
             <span class="line1"></span>
@@ -119,12 +119,18 @@
 
         <section class="sale">
             <h2>Pricing</h2>
+            <div class="currency">
+                <select class="currency__table" name="" id="currency">
+                    <option class="currency__option" value="eur">EUR</option>
+                    <option class="currency__option" value="usd">USD</option>
+                    <option class="currency__option" value="gbp">GBP</option>
+                </select>
+            </div>
             <div class="sale-div">
-
                 <article class="sale-red">
                     <div class="sale-text sale-margin-red">
                         <p>Basic</p>
-                        <p class='sale-text-red'>$0</p>
+                        <p class='sale-text-red'><span id="value__symbol">€</span>0</p>
                     </div>
                     <div class="sale-list">
                         <ul>
@@ -142,7 +148,7 @@
                 <article class="sale-blue">
                     <div class="sale-text sale-margin-blue">
                         <p>Professional</p>
-                        <p class='sale-text-blue'>$25</p>
+                        <p class='sale-text-blue'><span id="value__symbol">€</span><span id="value__blue">25</span></p>
                         <p>Limited offer</p>
                     </div>
                     <div class="sale-list">
@@ -161,7 +167,7 @@
                 <article class=" sale-green">
                     <div class="sale-text sale-margin-green">
                         <p>Premium</p>
-                        <p class='sale-text-green'>$60</p>
+                        <p class='sale-text-green'><span id="value__symbol">€</span><span id="value__green">60</span></p>
                         <p>Limited offer</p>
                     </div>
                     <div class="sale-list">
