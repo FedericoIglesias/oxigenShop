@@ -11,7 +11,7 @@ let checkboxInput = document.getElementById('checkbox__input')
 let checkboxDiv = document.getElementById('contact__checkbox')
 let popUp = document.getElementById('popUp')
 let backgroundGrey = document.getElementById('backgroundGrey')
-let help = 1;
+let help = 0;
 let cross = document.getElementById('popUp__cross')
 let popUpMail = document.getElementById('popUp__input')
 let popUpSend = document.getElementById('popUp__send')
@@ -57,7 +57,7 @@ let percentageScroller = () => {
     ubi = Math.floor(-((((foot.getBoundingClientRect().top) - 665) / 43.98) - 101))
     bar.setAttribute('style', 'width: ' + ubi + '%');
     if (ubi >= 65) {
-        //buttonUp.setAttribute('class', 'button__up')
+        buttonUp.setAttribute('class', 'button__up')
     } else { buttonUp.setAttribute('class', 'button__up display_none') }
     if (help == 0 && ubi >= 25) { { backgroundGrey.setAttribute('class', 'backgroundGrey'), popUp.setAttribute('class', 'popUp'), help = 1 } };
 };
@@ -84,7 +84,7 @@ formValidation.onclick = function () {
     if (!(formMail.value.match(formatMail))) { formMail.setAttribute('class', 'contact-line-input border__error') }
     else { console.log('to  piola vroooooooo el mail'), formMail.setAttribute('class', 'contact-line-input') }
     //----------
-    if (checkboxInput.checked) { checkboxDiv.setAttribute('style', 'background-color: red') }
+    if (checkboxInput.checked) { checkboxDiv.setAttribute('style', '')}
     else {
         checkboxDiv.setAttribute('style', 'background-color: red')
     }
@@ -218,13 +218,17 @@ let getValue = () => {
         })
 };
 
-
 document.getElementById('currency').onclick = (getValue)
 
-// innerHTML
+/* <p id="menu__why">WHY US</p>
+<p id="menu__benefits">BENEFITS</p>
+<p id="menu__prices">PRICES</p>
+<p id="menu__contact">CONTACT</p> */
 
-// console.log(document.getElementById('currency').value)
 
+
+
+// window.scrollTo(0, 400) 
 
 
 

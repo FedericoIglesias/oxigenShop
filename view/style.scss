@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Raleway", sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 body {
     min-width: 320px;
@@ -922,9 +922,16 @@ footer {
             .contact-terms {
                 margin: 0;
                 width: 100%;
-                input {
-                    float: left;
-                    margin-right: 10px;
+                display: flex;
+                .contact__checkbox{
+                    width: 23px;
+                    height: 23px;
+                    margin-right: 5px;
+                    .checkbox__input{
+                        width: 20px;
+                        height: 20px;
+                        border-color:red;
+                    }
                 }
                 label {
                     color: #a5a5a5;

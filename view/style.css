@@ -910,10 +910,17 @@ footer .foot-social .foot-social-facebook {
   .contact .contact-informatio-second .contact-terms {
     margin: 0;
     width: 100%;
+    display: flex;
   }
-  .contact .contact-informatio-second .contact-terms input {
-    float: left;
-    margin-right: 10px;
+  .contact .contact-informatio-second .contact-terms .contact__checkbox {
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+  }
+  .contact .contact-informatio-second .contact-terms .contact__checkbox .checkbox__input {
+    width: 20px;
+    height: 20px;
+    border-color: red;
   }
   .contact .contact-informatio-second .contact-terms label {
     color: #a5a5a5;
