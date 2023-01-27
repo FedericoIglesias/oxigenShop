@@ -611,33 +611,35 @@ footer .foot-social .foot-social-facebook {
     text-align: left;
   }
   header {
-    max-width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-  }
-  header h1 {
-    width: 50%;
+    height: 60px;
+    padding: 0;
   }
   header .menu {
+    position: static;
     display: flex;
     justify-content: end;
-    position: static;
+    align-items: center;
     box-shadow: none;
-    margin-right: 5%;
+    height: 100%;
+    margin-right: 50px;
   }
-  header .menu div {
-    margin: 0 40px;
-  }
-  header .menu div p {
+  header .menu p {
     font-size: 11px;
     font-weight: 700;
     color: #a5a5a5;
+    width: 50px;
+    height: 40px;
+    display: block;
+    margin-left: 50px;
+    margin-top: 20px;
+    text-align: center;
   }
-  header .menu .div:hover {
+  header .menu p:hover {
+    border-bottom: #08a6e4 solid 3px;
     color: black;
-    border-bottom: #08a6e4 solid 4px;
   }
   header .menu__hamburguesa {
     display: none;
