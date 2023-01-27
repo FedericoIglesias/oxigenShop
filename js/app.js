@@ -67,9 +67,9 @@ popUpSend.onclick = () => {
 //menu mobile
 document.getElementById('menuBtn').onclick = function () {
     if (menu.getAttribute('class').includes('display_none')) {
-        menu.setAttribute('class', 'hamburguesa__menu')
+        menu.setAttribute('class', 'menu')
     } else {
-        menu.setAttribute('class', 'hamburguesa__menu display_none')
+        menu.setAttribute('class', 'menu display_none')
     }
 }
 
@@ -138,7 +138,6 @@ const sendForm = async (name, email) => {
 let count = 1
 
     let go = () => {
-        console.log(count)
         document.getElementById('slider__1').setAttribute('class', 'img__slider display_none')
         document.getElementById('slider__2').setAttribute('class', 'img__slider display_none')
         document.getElementById('slider__3').setAttribute('class', 'img__slider display_none')
@@ -206,4 +205,4 @@ document.getElementById('select__5').onclick = function(){count = 5; go()};
 
 
 document.getElementById('arrow__prev').onclick = function(){if(count == 1){count = 4; go()}else{count = count - 2; go()}};
-document.getElementById('arrow__next').onclick = function(){go()};;
+document.getElementById('arrow__next').onclick = function(){go()};

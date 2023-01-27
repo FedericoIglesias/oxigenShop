@@ -3,11 +3,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
   min-width: 320px;
-  font-family: "Raleway", sans-serif;
 }
 
 .backgroundGrey {
@@ -121,31 +121,22 @@ body {
 }
 
 header {
-  max-width: 375px;
   margin: 0 auto;
-  height: 70px;
+  position: relative;
+  padding: 20px 20px 50px;
 }
 header h1 {
   color: #08a6e4;
   font-weight: 300;
-  margin: 17px 0 17px 25px;
-  float: left;
-}
-header .menu {
-  font-family: "Open Sans", sans-serif;
-  display: none;
-  height: 100%;
+  display: inline-block;
+  position: absolute;
+  left: 10%;
 }
 header .menu__hamburguesa {
-  float: right;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
-}
-header .menu__hamburguesa .hamburguesa__menu {
-  list-style: none;
+  display: inline-block;
+  position: absolute;
+  right: 10%;
 }
 header .menu__hamburguesa span {
   display: block;
@@ -153,6 +144,29 @@ header .menu__hamburguesa span {
   height: 4px;
   width: 40px;
   margin-top: 6px;
+}
+header .menu {
+  font-family: "Open Sans", sans-serif;
+  display: block;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 70px;
+  background-color: white;
+  padding-left: 10px;
+  box-shadow: 1px 1px 1px black;
+}
+header .menu p {
+  margin: 3px;
+  font-weight: 700;
+  color: #a5a5a5;
+  font-size: 11px;
+}
+header .menu p:hover {
+  color: black;
+}
+header .display_none {
+  display: none;
 }
 
 main {
@@ -598,36 +612,34 @@ footer .foot-social .foot-social-facebook {
   }
   header {
     max-width: 90%;
-    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
   }
   header h1 {
-    float: none;
-    margin: 0;
+    width: 50%;
   }
   header .menu {
     display: flex;
-    justify-content: center;
+    justify-content: end;
+    position: static;
+    box-shadow: none;
+    margin-right: 5%;
   }
   header .menu div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    margin: 0 45px;
-  }
-  header .menu div :hover {
-    color: black;
-    border-bottom: #08a6e4 solid 4px;
+    margin: 0 40px;
   }
   header .menu div p {
     font-size: 11px;
     font-weight: 700;
     color: #a5a5a5;
   }
-  header .icon {
+  header .menu .div:hover {
+    color: black;
+    border-bottom: #08a6e4 solid 4px;
+  }
+  header .menu__hamburguesa {
     display: none;
   }
   main .show .articles-popular {
@@ -879,4 +891,7 @@ footer .foot-social .foot-social-facebook {
     display: flex;
     justify-content: end;
   }
+}
+.display_none {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
