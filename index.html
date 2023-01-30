@@ -39,10 +39,10 @@
             <span class="line3"></span>
         </div>
         <div class="menu display_none" id="hamburguesa__menu">
-            <p id="menu__why">WHY US</p>
-            <p id="menu__benefits">BENEFITS</p>
-            <p id="menu__prices">PRICES</p>
-            <p id="menu__contact">CONTACT</p>
+            <p id="menu__why"><a href="#why"> WHY US</a></p>
+            <p id="menu__benefits"><a href="#benefits">BENEFITS</a></p>
+            <p id="menu__prices"><a href="#prices">PRICES</a></p>
+            <p id="menu__contact"><a href="#contact">CONTACT</a></p>
         </div>
     </header>
     <main>
@@ -55,7 +55,8 @@
             <div class="img-main">
                 <img src="img/Background 1.svg" alt="Laptop">
             </div>
-            <div class="subtitle-popular">
+            <div id="why"></div>
+            <div class="subtitle-popular" >
                 <p>The most popular sales platform in country</p>
             </div>
             <div class="articles-popular">
@@ -76,7 +77,8 @@
                 </article>
             </div>
         </section>
-        <section class="cards">
+        <div id="benefits"></div>
+        <section class="cards" >
             <article>
                 <div class="cards-container-div-img">
                     <img src="img/Macbook2 2.svg" alt="mac">
@@ -111,13 +113,13 @@
                         <hr class="cards-green-line">
                     </div>
                 </div>
-                <div class="cards-background-green">
+                <div class="cards-background-green" >
                     <img src="img/Trumpet 2.svg" alt="trompeta">
                 </div>
             </article>
-        </section>
-
-        <section class="sale">
+        </section >
+<div id="prices"></div>
+        <section class="sale" >
             <h2>Pricing</h2>
             <div class="currency">
                 <select class="currency__table" name="" id="currency">
@@ -148,7 +150,7 @@
                 <article class="sale-blue">
                     <div class="sale-text sale-margin-blue">
                         <p>Professional</p>
-                        <p class='sale-text-blue'><span id="value__symbol">€</span><span id="value__blue">25</span></p>
+                        <p class='sale-text-blue'><span id="symbol__blue">€</span><span id="value__blue">25</span></p>
                         <p>Limited offer</p>
                     </div>
                     <div class="sale-list">
@@ -167,7 +169,7 @@
                 <article class=" sale-green">
                     <div class="sale-text sale-margin-green">
                         <p>Premium</p>
-                        <p class='sale-text-green'><span id="value__symbol">€</span><span id="value__green">60</span></p>
+                        <p class='sale-text-green'><span id="symbol__green">€</span><span id="value__green">60</span></p>
                         <p>Limited offer</p>
                     </div>
                     <div class="sale-list">
@@ -209,7 +211,7 @@
                 </div>
             </div>
         </section>
-        <section class="contact">
+        <section class="contact" id="contact">
             <div class="contact-informatio-first">
                 <div class="contact-title">
                     <h6>Any questions?</h6>

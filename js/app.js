@@ -54,7 +54,7 @@ document.getElementById('menuBtn').onclick = function () {
 
 //percentage scroller bar and show button up
 let percentageScroller = () => {
-    ubi = Math.floor(-((((foot.getBoundingClientRect().top) - 665) / 43.98) - 101))
+    ubi = Math.floor(-((((foot.getBoundingClientRect().top) - 665) / 43.98) - 109))
     bar.setAttribute('style', 'width: ' + ubi + '%');
     if (ubi >= 65) {
         buttonUp.setAttribute('class', 'button__up')
@@ -202,6 +202,8 @@ let getValue = () => {
                     document.getElementById('value__symbol').innerHTML = '£';
                     document.getElementById('value__green').innerHTML = Math.floor(valueGreen);
                     document.getElementById('value__blue').innerHTML = Math.floor(valueBlue);
+                    document.getElementById('symbol__blue').innerHTML = '£';
+                    document.getElementById('symbol__green').innerHTML = '£';
                     break;
                 case 'usd':
                     valueGreen = data.eur.usd * 60;
@@ -209,8 +211,12 @@ let getValue = () => {
                     document.getElementById('value__symbol').innerHTML = '$';
                     document.getElementById('value__green').innerHTML = Math.floor(valueGreen)
                     document.getElementById('value__blue').innerHTML = Math.floor(valueBlue)
+                    document.getElementById('symbol__blue').innerHTML = '$';
+                    document.getElementById('symbol__green').innerHTML = '$';
                     break;
                 default:
+                    document.getElementById('symbol__blue').innerHTML = '€';
+                    document.getElementById('symbol__green').innerHTML = '€';
                     document.getElementById('value__symbol').innerHTML = '€';
                     document.getElementById('value__green').innerHTML = 60
                     document.getElementById('value__blue').innerHTML = 25
@@ -220,15 +226,6 @@ let getValue = () => {
 
 document.getElementById('currency').onclick = (getValue)
 
-/* <p id="menu__why">WHY US</p>
-<p id="menu__benefits">BENEFITS</p>
-<p id="menu__prices">PRICES</p>
-<p id="menu__contact">CONTACT</p> */
-
-
-
-
-// window.scrollTo(0, 400) 
 
 
 
