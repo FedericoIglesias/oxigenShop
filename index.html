@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OXYGENShop</title>
     <link rel="stylesheet" href="view/style.css">
     <script src="https://kit.fontawesome.com/0ac045a0e5.js" crossorigin="anonymous"></script>
 </head>
@@ -30,7 +30,7 @@
     <!-- bar percentage -->
     <div class='percentage__scroller' id="percentage__scroller"></div>
     <!-- button to up -->
-    <div><img src="img/cohete.png" alt="cohete" class="button__up display_none" id="button__up"></div>
+    <div><img src="img/arrowTop.svg" alt="cohete" class="button__up display_none" id="button__up"></div>
     <header class="box__shadow" id="header">
         <h1>OXYGENShop</h1>
         <div class="menu__hamburguesa" id="menuBtn">
@@ -39,10 +39,10 @@
             <span class="line3"></span>
         </div>
         <div class="menu display_none" id="hamburguesa__menu">
-            <p id="menu__why"><a href="#why"> WHY US</a></p>
-            <p id="menu__benefits"><a href="#benefits">BENEFITS</a></p>
-            <p id="menu__prices"><a href="#prices">PRICES</a></p>
-            <p id="menu__contact"><a href="#contact">CONTACT</a></p>
+            <p id="menu__why"><a> WHY US</a></p>
+            <p id="menu__benefits"><a>BENEFITS</a></p>
+            <p id="menu__prices"><a>PRICES</a></p>
+            <p id="menu__contact"><a>CONTACT</a></p>
         </div>
     </header>
     <main>
@@ -52,11 +52,10 @@
             <div>
                 <button class="button-open">Open your shop</button>
             </div>
-            <div class="img-main">
+            <div class="img_main">
                 <img src="img/Background 1.svg" alt="Laptop">
             </div>
-            <div id="why"></div>
-            <div class="subtitle-popular" >
+            <div class="subtitle-popular">
                 <p>The most popular sales platform in country</p>
             </div>
             <div class="articles-popular">
@@ -77,8 +76,7 @@
                 </article>
             </div>
         </section>
-        <div id="benefits"></div>
-        <section class="cards" >
+        <section class="cards">
             <article>
                 <div class="cards-container-div-img">
                     <img src="img/Macbook2 2.svg" alt="mac">
@@ -113,13 +111,12 @@
                         <hr class="cards-green-line">
                     </div>
                 </div>
-                <div class="cards-background-green" >
+                <div class="cards-background-green">
                     <img src="img/Trumpet 2.svg" alt="trompeta">
                 </div>
             </article>
-        </section >
-<div id="prices"></div>
-        <section class="sale" >
+        </section>
+        <section class="sale">
             <h2>Pricing</h2>
             <div class="currency">
                 <select class="currency__table" name="" id="currency">
@@ -169,7 +166,8 @@
                 <article class=" sale-green">
                     <div class="sale-text sale-margin-green">
                         <p>Premium</p>
-                        <p class='sale-text-green'><span id="symbol__green">€</span><span id="value__green">60</span></p>
+                        <p class='sale-text-green'><span id="symbol__green">€</span><span id="value__green">60</span>
+                        </p>
                         <p>Limited offer</p>
                     </div>
                     <div class="sale-list">
@@ -230,6 +228,8 @@
             </div>
             <div class="contact-informatio-second">
                 <div class="contact-padding">
+                    <p class="help__1 display_none" id="help__1">The name should have beetwen 2 and 100 character</p>
+                    <p class="help__2 display_none" id="help__2">Example: 'xyz@xyz.com'</p>
                     <label for="" class="contact-line-label">NAME</label>
                     <br>
                     <input type="text" class="contact-line-input " id="contact-line-name">
@@ -259,14 +259,14 @@
         </section>
     </main>
     <Footer id="footer">
-        <section>
+        <section class="foot__section">
             <div class="foot-title">
                 <h1>OXYGENShop</h1>
                 <p>© 2022 OXYGEN, All Rights Reserved</p>
             </div>
             <div class="foot-social">
-                <a href="www.twitter.com" class="foot-social-twitter"><i class="fa-brands fa-twitter"></i></a>
-                <a href="www.facebook.com" class="foot-social-facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com " class="foot-social-twitter" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://facebook.com/" class="foot-social-facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </section>
     </Footer>

@@ -11,16 +11,14 @@ let checkboxInput = document.getElementById('checkbox__input')
 let checkboxDiv = document.getElementById('contact__checkbox')
 let popUp = document.getElementById('popUp')
 let backgroundGrey = document.getElementById('backgroundGrey')
-let help = 0;
 let cross = document.getElementById('popUp__cross')
 let popUpMail = document.getElementById('popUp__input')
 let popUpSend = document.getElementById('popUp__send')
 
 
-
 // alert!!! suscribe to our newsletter
 window.setTimeout(() => {
-    if (help == 0) { backgroundGrey.setAttribute('class', 'backgroundGrey'), popUp.setAttribute('class', 'popUp'), help = 1 }
+    if (localStorage.getItem('help') == null) { backgroundGrey.setAttribute('class', 'backgroundGrey'), popUp.setAttribute('class', 'popUp'), localStorage.setItem('help', 1) }
 }, 5000)
 
 backgroundGrey.onclick = () => {
@@ -54,12 +52,14 @@ document.getElementById('menuBtn').onclick = function () {
 
 //percentage scroller bar and show button up
 let percentageScroller = () => {
-    ubi = Math.floor(-((((foot.getBoundingClientRect().top) - 665) / 43.98) - 109))
+    if(screen.width < 1000){
+        ubi = Math.floor((-(((foot.getBoundingClientRect().top) - 468) / 45.05) + 101))
+    }else{ubi = Math.floor((-(((foot.getBoundingClientRect().top) - 468) / 37.81) + 101))}
     bar.setAttribute('style', 'width: ' + ubi + '%');
-    if (ubi >= 65) {
+    if (ubi >= 1) {
         buttonUp.setAttribute('class', 'button__up')
     } else { buttonUp.setAttribute('class', 'button__up display_none') }
-    if (help == 0 && ubi >= 25) { { backgroundGrey.setAttribute('class', 'backgroundGrey'), popUp.setAttribute('class', 'popUp'), help = 1 } };
+    if (localStorage.getItem('help') == null && ubi >= 25) { { backgroundGrey.setAttribute('class', 'backgroundGrey'), popUp.setAttribute('class', 'popUp'), localStorage.setItem('help', 1) } };
 };
 ;
 window.addEventListener('scroll', percentageScroller);
@@ -69,7 +69,7 @@ window.addEventListener('scroll', percentageScroller);
 buttonUp.onclick = function () {
     console.log(scrollY)
     let moveTop = setInterval(function () {
-        window.scrollTo(0, scrollY - 4)
+        window.scrollTo(0, scrollY - 10)
         console.log(scrollY);
         if (scrollY <= 0) { clearInterval(moveTop) }
     }, 5)
@@ -78,18 +78,20 @@ buttonUp.onclick = function () {
 //Validation the form
 formValidation.onclick = function () {
     let auxName = formName.value.length
-    if (auxName <= 1 || auxName >= 101) { formName.setAttribute('class', 'contact-line-input border__error') }
-    else { console.log('to  piola vroooooooo'), formName.setAttribute('class', 'contact-line-input') }
+    let aux1 = 0
+    let aux2 = 0
+    let aux3 = 0
+    if (auxName <= 1 || auxName >= 101) { formName.setAttribute('class', 'contact-line-input border__error'), aux1 = 0, document.getElementById('help__1').setAttribute('class','help__1') }
+    else { formName.setAttribute('class', 'contact-line-input'), aux1 = 1, document.getElementById('help__1').setAttribute('class','help__1 display_none') }
     //----------
-    if (!(formMail.value.match(formatMail))) { formMail.setAttribute('class', 'contact-line-input border__error') }
-    else { console.log('to  piola vroooooooo el mail'), formMail.setAttribute('class', 'contact-line-input') }
+    if (!(formMail.value.match(formatMail))) { formMail.setAttribute('class', 'contact-line-input border__error'),aux2 = 0, document.getElementById('help__2').setAttribute('class','help__2 ') }
+    else {formMail.setAttribute('class', 'contact-line-input'),aux2 = 1, document.getElementById('help__2').setAttribute('class','help__2 display_none') }
     //----------
-    if (checkboxInput.checked) { checkboxDiv.setAttribute('style', '')}
+    if (checkboxInput.checked) { checkboxDiv.setAttribute('style', ''),aux3 = 1}
     else {
-        checkboxDiv.setAttribute('style', 'background-color: red')
+        checkboxDiv.setAttribute('style', 'background-color: red'),aux3 = 0
     }
-
-    sendForm(formName, formMail)
+    if((aux1 + aux2 + aux3) == 3){sendForm(formName, formMail)}
 }
 
 // Send  validation form
@@ -107,15 +109,19 @@ const sendForm = async (name, email) => {
     })
         .then((response) => response.json())
         .then((json) => console.log(json));
+        location. reload()
 }
 
 
 //slider 
 
+let carrusel = () => { setInterval(function () { go() }, 3000)}
+carrusel();
+
 
 let count = 1
-
 let go = () => {
+    clearInterval(carrusel);
     document.getElementById('slider__1').setAttribute('class', 'img__slider display_none')
     document.getElementById('slider__2').setAttribute('class', 'img__slider display_none')
     document.getElementById('slider__3').setAttribute('class', 'img__slider display_none')
@@ -130,7 +136,8 @@ let go = () => {
         case 1: count += 1;
             document
                 .getElementById('slider__1')
-                .setAttribute('class', 'img__slider')
+                .setAttribute('class', 'img__slider'),
+            
             document
                 .getElementById('select__1')
                 .setAttribute('class', 'select__design background__white')
@@ -172,17 +179,13 @@ let go = () => {
 
 
 
-window.setInterval(function () { go() }, 3000)
-
 
 document.getElementById('select__1').onclick = function () { count = 1; go() };
 document.getElementById('select__2').onclick = function () { count = 2; go() };
 document.getElementById('select__3').onclick = function () { count = 3; go() };
 document.getElementById('select__4').onclick = function () { count = 4; go() };
 document.getElementById('select__5').onclick = function () { count = 5; go() };
-
-
-document.getElementById('arrow__prev').onclick = function () { if (count == 1) { count = 4; go() } else { count = count - 2; go() } };
+document.getElementById('arrow__prev').onclick = function () { if (count == 1) { count = 4; go(), stop() } else { count = count - 2; go()} };
 document.getElementById('arrow__next').onclick = function () { go() };
 
 
@@ -226,6 +229,38 @@ let getValue = () => {
 
 document.getElementById('currency').onclick = (getValue)
 
+// menu scroll function
 
+document.getElementById('menu__why').onclick = function (){
+    let moveTo = setInterval(function () {
+        if(scrollY < 600){window.scrollTo(0, scrollY + 4)
+        }else{window.scrollTo(0, scrollY - 4)}
+        if (scrollY <= 602 && scrollY >= 598) { clearInterval(moveTo) }
+    }, 1)
+}
 
+document.getElementById('menu__benefits').onclick = function (){
+    console.log(scrollY)
+    let moveTo = setInterval(function () {
+        if(scrollY < 1100){window.scrollTo(0, scrollY + 4)
+        }else{window.scrollTo(0, scrollY - 4)}
+        if (scrollY <= 1102 && scrollY >= 1098) { clearInterval(moveTo) }
+    }, 1)
+}
+
+document.getElementById('menu__prices').onclick = function (){
+    let moveTo = setInterval(function () {
+        if(scrollY < 2400){window.scrollTo(0, scrollY + 4)
+        }else{window.scrollTo(0, scrollY - 4)}
+        if (scrollY <= 2402 && scrollY >= 2398) { clearInterval(moveTo) }
+    }, 1)
+}
+
+document.getElementById('menu__contact').onclick = function (){
+    let moveTo = setInterval(function () {
+        if(scrollY < 3620){window.scrollTo(0, scrollY + 4)
+        }else{window.scrollTo(0, scrollY - 4)}
+        if (scrollY <= 3622 && scrollY >= 3618) { clearInterval(moveTo) }
+    }, 1)
+}
 

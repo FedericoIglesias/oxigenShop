@@ -2,13 +2,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 body {
     min-width: 320px;
 }
 
-main{
+main {
     .sale {
         margin: auto;
         padding-bottom: 30px;
@@ -17,18 +17,17 @@ main{
             font-size: 36px;
             margin: 55px 0 15px;
         }
-        .currency{
+        .currency {
             text-align: center;
-            .currency__table{
+            .currency__table {
                 font-size: 20px;
                 width: 100px;
-                .currency__option{
+                .currency__option {
                     width: 50px;
                     font-size: 10px;
                 }
             }
         }
-
         article {
             margin: 50px auto;
             width: 90%;
@@ -39,27 +38,30 @@ main{
         .sale-red {
             border: #fb3b64 solid 1px;
             border-radius: 10px;
-            box-shadow: 1px 1px 1px 1px 1px #fb3b64;
+            transition: transform 1s;
         }
         .sale-red:hover {
             transform: scale(110%);
-            box-shadow: 4px 4px 14px 1px #fb3b64;}
+            box-shadow: 4px 4px 14px 1px #fb3b64;
+        }
         .sale-green {
             border: #55dfb4 solid 1px;
             border-radius: 10px;
+            transition: transform 1s;
         }
         .sale-green:hover {
             transform: scale(110%);
-
-            box-shadow: 4px 4px 14px 1px #55dfb4;}
+            box-shadow: 4px 4px 14px 1px #55dfb4;
+        }
         .sale-blue {
             border: #08a6e4 solid 1px;
             border-radius: 10px;
+            transition: transform 1s;
         }
         .sale-blue:hover {
             transform: scale(110%);
-
-            box-shadow: 4px 4px 14px 1px #08a6e4;}
+            box-shadow: 4px 4px 14px 1px #08a6e4;
+        }
         .sale-margin-red {
             margin-left: 60px;
         }
@@ -138,40 +140,41 @@ main{
     }
 }
 @media (min-width: 1000px) {
-.sale {
-    margin: auto;
-    padding-bottom: 30px;
-    .sale-div {
-        display: flex;
-        justify-content: space-around;
-        article {
-            height: 500px;
+    .sale {
+        margin: auto;
+        padding-bottom: 30px;
+        .sale-div {
             display: flex;
-            flex-flow: column wrap;
             justify-content: center;
-            align-items: center;
-            .sale-margin-red {
-                margin-left: 0px;
-            }
-            .sale-margin-blue {
-                margin-left: 0px;
-            }
-            .sale-margin-green {
-                margin-left: 0px;
-            }
-            .sale-text {
-                padding: 0;
-            }
-            .sale-list {
-                text-align: center;
-                ul {
-                    margin-right: 0px;
-                    li {
-                        text-align: center;
+            article {
+                margin: 40px 3% 0 ;
+                height: 500px;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                .sale-margin-red {
+                    margin-left: 0px;
+                }
+                .sale-margin-blue {
+                    margin-left: 0px;
+                }
+                .sale-margin-green {
+                    margin-left: 0px;
+                }
+                .sale-text {
+                    padding: 0;
+                }
+                .sale-list {
+                    text-align: center;
+                    ul {
+                        margin-right: 0px;
+                        li {
+                            text-align: center;
+                        }
                     }
                 }
             }
         }
     }
-}
 }

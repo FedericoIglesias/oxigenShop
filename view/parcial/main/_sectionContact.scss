@@ -39,6 +39,22 @@ main{
         }
         .contact-padding {
             padding-top: 30px;
+            position: relative;
+            .help__1{
+                position: absolute;
+                color: red;
+                font-size: 10px;
+                top: 70px;
+            }
+            .help__2{
+                position: absolute;
+                color: red;
+                font-size: 10px;
+                top: 150px;
+            }
+            .display_none{
+                display: none;
+            }
         }
         .contact-line-label {
             color: #08a6e4;

@@ -10,41 +10,41 @@ body {
   min-width: 320px;
 }
 
-footer {
+.foot__section {
   margin: 0 auto;
 }
-footer .foot-title {
+.foot__section .foot-title {
   float: left;
   padding-bottom: 40px;
   margin-left: 20px;
 }
-footer .foot-title h1 {
+.foot__section .foot-title h1 {
   color: #08a6e4;
   font-size: 30px;
   font-weight: 300;
 }
-footer .foot-title p {
+.foot__section .foot-title p {
   font-size: 11px;
   color: #95989a;
 }
-footer .foot-social {
+.foot__section .foot-social {
   float: right;
   margin-right: 20px;
   padding-top: 10px;
 }
-footer .foot-social .foot-social-twitter {
+.foot__section .foot-social .foot-social-twitter {
   color: #55acee;
   font-size: 24px;
 }
-footer .foot-social .foot-social-facebook {
+.foot__section .foot-social .foot-social-facebook {
   color: #3b5998;
   font-size: 24px;
   margin-left: 20px;
 }
 
 @media (min-width: 1000px) {
-  .display_none {
-    display: none;
+  .foot__section {
+    padding: 0 10%;
   }
 }
 * {
@@ -118,10 +118,6 @@ header .display_none {
   display: none;
 }
 
-.box__shadow {
-  box-shadow: 1px 0 1px black;
-}
-
 @media (min-width: 1000px) {
   header {
     display: flex;
@@ -179,7 +175,7 @@ body {
 }
 
 main .cards {
-  background-color: #a5a5a5;
+  background-color: #F7F7F7;
   padding: 20px 0;
 }
 main .cards article {
@@ -340,7 +336,7 @@ main .cards article .cards-background-green img {
     display: inline-block;
   }
   .cards article:nth-child(3) {
-    background-color: #a5a5a5;
+    background-color: #F7F7F7;
     max-width: 1124px;
     display: flex;
     height: 370px;
@@ -396,7 +392,6 @@ body {
 
 main {
   margin-top: 50px;
-  box-shadow: inset 0 1px 10px;
   clear: both;
 }
 main .show {
@@ -422,9 +417,9 @@ main .show .button-open {
   box-shadow: 2px 2px 10px #08a6e4;
   font-family: "Open Sans", sans-serif;
 }
-main .show .img-main img {
-  box-sizing: border-box;
+main .show .img_main img {
   width: 100%;
+  height: 35vw;
 }
 main .show .subtitle-popular {
   text-align: center;
@@ -433,8 +428,6 @@ main .show .subtitle-popular {
   font-weight: 300;
 }
 main .show article {
-  align-items: center;
-  justify-content: center;
   display: block;
 }
 main .show article .article-number {
@@ -489,8 +482,11 @@ main .show article .circle-green img {
   .show .articles-popular {
     height: 400px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+  }
+  .show .articles-popular article {
+    margin: auto 5%;
   }
 }
 * {
@@ -534,7 +530,7 @@ main .sale article {
 main .sale .sale-red {
   border: #fb3b64 solid 1px;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px 1px 1px #fb3b64;
+  transition: transform 1s;
 }
 main .sale .sale-red:hover {
   transform: scale(110%);
@@ -543,6 +539,7 @@ main .sale .sale-red:hover {
 main .sale .sale-green {
   border: #55dfb4 solid 1px;
   border-radius: 10px;
+  transition: transform 1s;
 }
 main .sale .sale-green:hover {
   transform: scale(110%);
@@ -551,6 +548,7 @@ main .sale .sale-green:hover {
 main .sale .sale-blue {
   border: #08a6e4 solid 1px;
   border-radius: 10px;
+  transition: transform 1s;
 }
 main .sale .sale-blue:hover {
   transform: scale(110%);
@@ -639,9 +637,10 @@ main .sale .button-green {
   }
   .sale .sale-div {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
   }
   .sale .sale-div article {
+    margin: 40px 3% 0;
     height: 500px;
     display: flex;
     flex-flow: column wrap;
@@ -713,6 +712,22 @@ main .contact .contact-line p {
 }
 main .contact .contact-padding {
   padding-top: 30px;
+  position: relative;
+}
+main .contact .contact-padding .help__1 {
+  position: absolute;
+  color: red;
+  font-size: 10px;
+  top: 70px;
+}
+main .contact .contact-padding .help__2 {
+  position: absolute;
+  color: red;
+  font-size: 10px;
+  top: 150px;
+}
+main .contact .contact-padding .display_none {
+  display: none;
 }
 main .contact .contact-line-label {
   color: #08a6e4;
@@ -861,6 +876,8 @@ main .slider {
   margin: 100px auto;
   position: relative;
   background-color: black;
+  max-width: 1000px;
+  max-height: 700px;
 }
 main .slider .img__slider {
   width: 100%;
@@ -908,6 +925,10 @@ main .slider .slider__index .button__select .select__design {
 main .slider .slider__index .button__select .background__white {
   background-color: rgba(255, 255, 255, 0.9);
   border: none;
+}
+main #slider__2 {
+  padding: 0 25%;
+  background-color: white;
 }
 
 .backgroundGrey {
@@ -1015,9 +1036,9 @@ main .slider .slider__index .button__select .background__white {
 .button__up {
   z-index: 30;
   position: fixed;
-  bottom: 300px;
+  bottom: 10%;
   right: 10px;
-  width: 100px;
+  width: 5%;
 }
 
 @media (min-width: 1000px) {

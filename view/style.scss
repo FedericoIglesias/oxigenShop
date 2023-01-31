@@ -1,12 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@300;400;500;600;700;800&display=swap");
 @import "parcial/_footer.scss";
-@import 'parcial/_header.scss';
-@import 'parcial/main/_sectionCard.scss';
-@import 'parcial/main/_sectionShow.scss';
-@import 'parcial/main/_sectionSale.scss';
-@import 'parcial/main/_sectionContact.scss';
-@import 'parcial/main/_sectionSliders.scss';
-
+@import "parcial/_header.scss";
+@import "parcial/main/_sectionCard.scss";
+@import "parcial/main/_sectionShow.scss";
+@import "parcial/main/_sectionSale.scss";
+@import "parcial/main/_sectionContact.scss";
+@import "parcial/main/_sectionSliders.scss";
 
 .backgroundGrey {
     background-color: rgba(0, 0, 0, 0.5);
@@ -110,14 +109,10 @@
 .button__up {
     z-index: 30;
     position: fixed;
-    bottom: 300px;
+    bottom: 10%;
     right: 10px;
-    width: 100px;
+    width: 5%;
 }
-
-
-
-
 
 @media (min-width: 1000px) {
     .popUp {
