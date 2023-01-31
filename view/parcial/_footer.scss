@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    min-width: 320px;
+}
+footer {
+    margin: 0 auto;
+    .foot-title {
+        float: left;
+        padding-bottom: 40px;
+        margin-left: 20px;
+        h1 {
+            color: #08a6e4;
+            font-size: 30px;
+            font-weight: 300;
+        }
+        p {
+            font-size: 11px;
+            color: #95989a;
+        }
+    }
+    .foot-social {
+        float: right;
+        margin-right: 20px;
+        padding-top: 10px;
+        .foot-social-twitter {
+            color: #55acee;
+            font-size: 24px;
+        }
+        .foot-social-facebook {
+            color: #3b5998;
+            font-size: 24px;
+            margin-left: 20px;
+        }
+    }
+}
+@media (min-width: 1000px) {
+.display_none {
+    display: none;
+}
+}

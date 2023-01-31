@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+}
+body {
+    min-width: 320px;
+}
+
+header {
+    margin: 0 auto;
+    position: fixed;
+
+    top: 0;
+    padding: 20px 20px 50px;
+    background-color: white;
+    z-index: 10;
+    width: 100%;
+    h1 {
+        color: #08a6e4;
+        font-weight: 300;
+        display: inline-block;
+        position: absolute;
+        left: 10%;
+    }
+    .menu__hamburguesa {
+        height: 100%;
+        display: inline-block;
+        position: absolute;
+        right: 10%;
+        span {
+            display: block;
+            background-color: #08a6e4;
+            height: 4px;
+            width: 40px;
+            margin-top: 6px;
+        }
+    }
+    .menu {
+        font-family: "Open Sans", sans-serif;
+        display: block;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 70px;
+        background-color: white;
+        padding-left: 10px;
+        box-shadow: 1px 1px 1px black;
+        p {
+            margin: 3px;
+            font-weight: 700;
+            color: #a5a5a5;
+            font-size: 11px;
+            a {
+                text-decoration: none;
+                color: #a5a5a5;
+            }
+            a:hover {
+                color: black;
+            }
+        }
+        p:hover {
+            color: black;
+        }
+    }
+    .display_none {
+        display: none;
+    }
+}
+.box__shadow{
+    box-shadow: 1px 0 1px black;
+}
+
+@media (min-width: 1000px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        padding: 0;
+        .menu {
+            position: static;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            box-shadow: none;
+            height: 100%;
+
+            margin-right: 50px;
+            p {
+                font-size: 11px;
+                font-weight: 700;
+                width: 50px;
+                height: 40px;
+                display: block;
+                margin-left: 50px;
+                margin-top: 20px;
+                text-align: center;
+                a {
+                    text-decoration: none;
+                    color: #a5a5a5;
+                }
+                a:hover {
+                    color: black;
+                }
+            }
+            p:hover {
+                border-bottom: #08a6e4 solid 3px;
+            }
+        }
+        .menu__hamburguesa {
+            display: none;
+        }
+    }
+}
+
+.display_none {
+    display: none;
+}

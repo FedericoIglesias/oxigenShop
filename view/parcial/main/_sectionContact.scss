@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    min-width: 320px;
+}
+main{
+    .contact {
+        margin: 0 auto 50px;
+        max-width: 375px;
+        font-family: "Open Sans", sans-serif;
+        .contact-title {
+            margin-left: 25px;
+        }
+        h6 {
+            font-size: 40px;
+            font-family: "Raleway", sans-serif;
+        }
+        .contact-line {
+            margin: 40px 0;
+            padding-bottom: 40px;
+            .contact-email {
+                margin-left: 40px;
+            }
+            .contact-number {
+                margin-left: 40px;
+                margin-top: 15px;
+            }
+            p {
+                color: #a5a5a5;
+                font-weight: 600;
+                display: inline-block;
+                position: relative;
+                bottom: 7px;
+            }
+        }
+        .contact-padding {
+            padding-top: 30px;
+        }
+        .contact-line-label {
+            color: #08a6e4;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-left: 30px;
+        }
+        .contact-line-input {
+            border: none;
+            border-bottom: #95989a solid 2px;
+            width: 280px;
+            margin-left: 30px;
+            margin-bottom: 40px;
+        }
+        .border__error {
+            border: red solid 2px;
+        }
+        .contact-terms {
+            margin: auto;
+            width: 80%;
+            .contact__checkbox {
+                float: left;
+                width: 15px;
+                height: 15px;
+                .checkbox__input {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+            label {
+                color: #a5a5a5;
+                display: inline-block;
+                width: 85%;
+            }
+        }
+        button {
+            width: 226px;
+            padding: 20px 0;
+            border-radius: 50px;
+            color: white;
+            font-size: 13px;
+            font-weight: 700;
+            background-color: #08a6e4;
+            border: none;
+            margin: 40px 0 40px 80px;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .contact {
+        display: flex;
+        justify-content: center;
+        max-width: none;
+        .contact-informatio-first {
+            min-width: 360px;
+            margin-right: 113px;
+            .contact-title {
+                margin-left: 0;
+                p {
+                    margin-bottom: 42px;
+                }
+            }
+            h6 {
+                margin: 22px 0;
+                font-size: 49px;
+            }
+            .contact-line {
+                display: flex;
+                margin: 0;
+                padding: 0;
+                .contact-email {
+                    display: flex;
+                    margin: 0;
+                    img {
+                        width: 22px;
+                    }
+                    p {
+                        margin-left: 3px;
+                        position: static;
+                    }
+                }
+                .contact-number {
+                    display: flex;
+                    margin: 0;
+                    img {
+                        width: 22px;
+                        margin-left: 23px;
+                    }
+                    p {
+                        margin-left: 3px;
+                        position: static;
+                    }
+                }
+            }
+        }
+        .contact-informatio-second {
+            min-width: 440px;
+            .contact-line-label {
+                margin-left: 0px;
+            }
+            .contact-line-input {
+                width: 440px;
+                margin-left: 0px;
+            }
+            .contact-terms {
+                margin: 0;
+                width: 100%;
+                display: flex;
+                .contact__checkbox{
+                    width: 23px;
+                    height: 23px;
+                    margin-right: 5px;
+                    .checkbox__input{
+                        width: 20px;
+                        height: 20px;
+                        border-color:red;
+                    }
+                }
+                label {
+                    color: #a5a5a5;
+                    display: inline-block;
+                    width: 90%;
+                }
+            }
+            .contact-button {
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+}
