@@ -115,13 +115,13 @@ const sendForm = async (name, email) => {
 
 //slider 
 
-let carrusel = () => { setInterval(function () { go() }, 3000)}
-carrusel();
+let carrusel = () => { let carru = setInterval(function () { go() }, 3000)}
 
+carrusel()
 
 let count = 1
 let go = () => {
-    clearInterval(carrusel);
+    
     document.getElementById('slider__1').setAttribute('class', 'img__slider display_none')
     document.getElementById('slider__2').setAttribute('class', 'img__slider display_none')
     document.getElementById('slider__3').setAttribute('class', 'img__slider display_none')
@@ -137,7 +137,6 @@ let go = () => {
             document
                 .getElementById('slider__1')
                 .setAttribute('class', 'img__slider'),
-            
             document
                 .getElementById('select__1')
                 .setAttribute('class', 'select__design background__white')
@@ -180,13 +179,13 @@ let go = () => {
 
 
 
-document.getElementById('select__1').onclick = function () { count = 1; go() };
-document.getElementById('select__2').onclick = function () { count = 2; go() };
-document.getElementById('select__3').onclick = function () { count = 3; go() };
-document.getElementById('select__4').onclick = function () { count = 4; go() };
-document.getElementById('select__5').onclick = function () { count = 5; go() };
-document.getElementById('arrow__prev').onclick = function () { if (count == 1) { count = 4; go(), stop() } else { count = count - 2; go()} };
-document.getElementById('arrow__next').onclick = function () { go() };
+document.getElementById('select__1').onclick = function () { count = 1; clearInterval(carru);go();carrusel };
+document.getElementById('select__2').onclick = function () { count = 2; clearInterval(carru);go();carrusel };
+document.getElementById('select__3').onclick = function () { count = 3; clearInterval(carru);go();carrusel };
+document.getElementById('select__4').onclick = function () { count = 4; clearInterval(carru);go();carrusel };
+document.getElementById('select__5').onclick = function () { count = 5; clearInterval(carru);go();carrusel };
+document.getElementById('arrow__prev').onclick = function () { if (count == 1) { count = 4; clearInterval(carru);go();carrusel } else { count = count - 2; clearInterval(carru);go();carrusel} };
+document.getElementById('arrow__next').onclick = function () { clearInterval(carru);go();carrusel };
 
 
 
