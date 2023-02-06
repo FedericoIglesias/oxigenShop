@@ -1039,7 +1039,7 @@ main #slider__2 {
   position: fixed;
   bottom: 10%;
   right: 10px;
-  width: 5%;
+  width: 3%;
 }
 
 @media (min-width: 1000px) {
