@@ -52,9 +52,10 @@ document.getElementById('menuBtn').onclick = function () {
 
 //percentage scroller bar and show button up
 let percentageScroller = () => {
+    console.log(foot.getBoundingClientRect().top)
     if(screen.width < 1000){
         ubi = Math.floor((-(((foot.getBoundingClientRect().top) - 468) / 45.05) + 101))
-    }else{ubi = Math.floor((-(((foot.getBoundingClientRect().top) - 468) / 37.81) + 101))}
+    }else{ubi = Math.floor((-(((foot.getBoundingClientRect().top) - 1342) / 29.07) + 101))}
     bar.setAttribute('style', 'width: ' + ubi + '%');
     if (ubi >= 1) {
         buttonUp.setAttribute('class', 'button__up')
@@ -241,25 +242,25 @@ document.getElementById('menu__why').onclick = function (){
 document.getElementById('menu__benefits').onclick = function (){
     console.log(scrollY)
     let moveTo = setInterval(function () {
-        if(scrollY < 1100){window.scrollTo(0, scrollY + 4)
+        if(scrollY < 1400){window.scrollTo(0, scrollY + 4)
         }else{window.scrollTo(0, scrollY - 4)}
-        if (scrollY <= 1102 && scrollY >= 1098) { clearInterval(moveTo) }
+        if (scrollY <= 1402 && scrollY >= 1398) { clearInterval(moveTo) }
     }, 1)
 }
 
 document.getElementById('menu__prices').onclick = function (){
     let moveTo = setInterval(function () {
-        if(scrollY < 2400){window.scrollTo(0, scrollY + 4)
+        if(scrollY < 2600){window.scrollTo(0, scrollY + 4)
         }else{window.scrollTo(0, scrollY - 4)}
-        if (scrollY <= 2402 && scrollY >= 2398) { clearInterval(moveTo) }
+        if (scrollY <= 2602 && scrollY >= 2598) { clearInterval(moveTo) }
     }, 1)
 }
 
 document.getElementById('menu__contact').onclick = function (){
     let moveTo = setInterval(function () {
-        if(scrollY < 3620){window.scrollTo(0, scrollY + 4)
+        if(scrollY < 3940){window.scrollTo(0, scrollY + 4)
         }else{window.scrollTo(0, scrollY - 4)}
-        if (scrollY <= 3622 && scrollY >= 3618) { clearInterval(moveTo) }
+        if (scrollY <= 3942 && scrollY >= 3938) { clearInterval(moveTo) }
     }, 1)
 }
 
