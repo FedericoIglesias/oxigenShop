@@ -941,11 +941,10 @@ main #slider__2 {
 }
 
 .popUp {
-  margin: 50px auto;
-  width: 90%;
+  width: 60%;
   height: 70%;
-  left: 5%;
   z-index: 1000;
+  margin: 50px;
   position: fixed;
   background-color: white;
   border: black solid 1px;
@@ -954,6 +953,7 @@ main #slider__2 {
   justify-content: space-between;
   align-items: center;
   box-shadow: 10px 10px 10px black;
+  margin-left: 20%;
 }
 .popUp .popUp__cross {
   width: 100%;
