@@ -33,7 +33,7 @@ cross.onclick = () => {
 popUpSend.onclick = () => {
     let name = popUpMail
     if (!(popUpMail.value.match(formatMail))) { popUpMail.setAttribute('style', 'border: red 2px solid') }
-    else { console.log('to  piola vroooooooo el mail'), backgroundGrey.setAttribute('class', 'backgroundGrey display_none'), popUp.setAttribute('class', 'popUp display_none') }
+    else { backgroundGrey.setAttribute('class', 'backgroundGrey display_none'), popUp.setAttribute('class', 'popUp display_none') }
 
 };
 
@@ -92,7 +92,7 @@ formValidation.onclick = function () {
     else {
         checkboxDiv.setAttribute('style', 'background-color: red'),aux3 = 0
     }
-    if((aux1 + aux2 + aux3) == 3){sendForm(formName, formMail)}
+    if((aux1 + aux2 + aux3) == 3){sendForm(formName, formMail), alert('Succes to send message')}
 }
 
 // Send  validation form
