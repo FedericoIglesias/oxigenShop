@@ -34,6 +34,10 @@ main{
             margin-top: 30px;
             box-shadow: 2px 2px 10px #08a6e4;
             font-family: "Open Sans", sans-serif;
+            &:hover{
+                background-color: #e48108;
+                box-shadow: 2px 2px 10px #e48108;
+            }
         }
         .img_main {
             img {
